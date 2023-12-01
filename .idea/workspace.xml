@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="" />
+    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/stationCurrentType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/chargingStation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/connector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/sequalize.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/stationType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,12 +31,34 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ralysen&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="852dbbcb-505c-40a1-9da4-86e0130ba214" />
+        <option name="url" value="https://github.com/Ralysen/codetain_task.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2YtTvzkD8YaEbHC3HtXbxqeqPgY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,7 +68,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "charger-development",
     "javascript.nodejs.core.library.configured.version": "20.9.0",
     "javascript.nodejs.core.library.typings.version": "20.9.0",
     "node.js.detected.package.eslint": "true",
@@ -42,6 +77,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\Repos\\charger\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -59,7 +95,10 @@
       <option name="presentableId" value="Default" />
       <updated>1701344110941</updated>
       <workItem from="1701344112017" duration="3470000" />
-      <workItem from="1701351655998" duration="650000" />
+      <workItem from="1701351655998" duration="13996000" />
+      <workItem from="1701427619917" duration="595000" />
+      <workItem from="1701429250049" duration="2843000" />
+      <workItem from="1701434297278" duration="1053000" />
     </task>
     <servers />
   </component>
