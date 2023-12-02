@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/stationCurrentType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/chargingStation.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/connector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/sequalize.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/stationType.ts" afterDir="false" />
+    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Create ORM Models">
+      <change afterPath="$PROJECT_DIR$/src/entity/chargingStation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/connector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/stationType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/chargingStation.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/connector.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/sequalize.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/stationType.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="charger-development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,7 +70,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "charger-development",
+    "git-widget-placeholder": "charger-development-radlys",
     "javascript.nodejs.core.library.configured.version": "20.9.0",
     "javascript.nodejs.core.library.typings.version": "20.9.0",
     "node.js.detected.package.eslint": "true",
@@ -98,8 +100,25 @@
       <workItem from="1701351655998" duration="13996000" />
       <workItem from="1701427619917" duration="595000" />
       <workItem from="1701429250049" duration="2843000" />
-      <workItem from="1701434297278" duration="1053000" />
+      <workItem from="1701434297278" duration="23500000" />
     </task>
+    <task id="LOCAL-00001" summary="Base project configuration">
+      <option name="closed" value="true" />
+      <created>1701437144948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701437144948</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Create ORM Models">
+      <option name="closed" value="true" />
+      <created>1701437510827</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701437510827</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,5 +128,10 @@
     <option featureType="dependencySupport" implementationName="executable:docker" />
     <option featureType="dependencySupport" implementationName="javascript:npm:pug" />
     <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Base project configuration" />
+    <MESSAGE value="Create ORM Models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create ORM Models" />
   </component>
 </project>
