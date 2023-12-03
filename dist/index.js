@@ -1,44 +1,49 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import "reflect-metadata";
-import { DataSource } from "typeorm";
-import { ChargingStation, Connector, StationType } from "./entity";
-import * as console from "console";
-dotenv.config();
-const app = express();
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const dotenv_1 = __importDefault(require("dotenv"));
+const cors_1 = __importDefault(require("cors"));
+require("reflect-metadata");
+const data_source_1 = require("./database/data-source");
+const errorHandler_1 = require("./utils/errorHandler");
+const connectorRoute_1 = __importDefault(require("./routes/connectorRoute"));
+const chargingStationRoute_1 = __importDefault(require("./routes/chargingStationRoute"));
+const stationTypeRoute_1 = __importDefault(require("./routes/stationTypeRoute"));
+dotenv_1.default.config();
+const app = (0, express_1.default)();
 const port = process.env.PORT || 8080;
 const corsOption = {
     origin: '*',
     methods: 'GET, POST, DELETE, PUT'
 };
-app.use(cors(corsOption));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-const AppDataSource = new DataSource({
-    type: "mysql",
-    host: "localhost",
-    port: 3306,
-    username: "root",
-    password: "Qwerty1@",
-    database: "charger",
-    synchronize: true,
-    logging: true,
-    entities: [Connector, ChargingStation, StationType]
+app.use((0, cors_1.default)(corsOption));
+app.use(express_1.default.json());
+app.use(express_1.default.urlencoded({ extended: true }));
+app.use("/connectors", errorHandler_1.ErrorHandler.handleErrors(connectorRoute_1.default));
+app.use("/station", errorHandler_1.ErrorHandler.handleErrors(chargingStationRoute_1.default));
+app.use("/station/types", errorHandler_1.ErrorHandler.handleErrors(stationTypeRoute_1.default));
+app.all("*", (req, res) => {
+    return res.status(404).send({
+        success: false,
+        message: "Invalid route",
+    });
 });
-const chargingStation = new ChargingStation();
-chargingStation.name = "its me malario";
-const chargingRepo = AppDataSource.getRepository(ChargingStation);
-await chargingRepo.save(chargingStation);
-AppDataSource.initialize()
+app.use((err, req, res, next) => {
+    console.log(err);
+    return res.status(500).send({
+        success: false,
+        message: "Internal server error",
+    });
+});
+data_source_1.AppDataSource.initialize()
     .then(() => {
     console.log("DB initialized successfully");
 })
     .catch((error) => console.error(error));
-app.get('/', (req, res) => {
-    res.json({ message: "Hello, its me" });
-});
 app.listen(port, () => {
     console.log(`[server]: Server is running at http:localhost:${port}`);
 });
-//# sourceMappingURL=index.js.map
+exports.default = app;

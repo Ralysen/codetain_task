@@ -1,11 +1,13 @@
-import {StationTypeController} from "../controllers/stationTypeController";
 import express from "express";
+import {StationTypeController} from "../controllers/stationTypeController";
 
 const stationTypeController = new StationTypeController();
-const route = express.Router();
+const router = express.Router();
 
-route.get('/station/types', stationTypeController.getStationTypes);
-route.get('/station/type/:id', stationTypeController.getStationType);
-route.post('/station/type', stationTypeController.createStationType);
-route.put('/station/type/:id', stationTypeController.updateStationType);
-route.delete('/station/type/:id', stationTypeController.deleteStationType);
+router.get('/', stationTypeController.getStationTypes);
+router.get('/:id', stationTypeController.getStationType);
+router.post('/', stationTypeController.createStationType);
+router.put('/:id', stationTypeController.updateStationType);
+router.delete('/:id', stationTypeController.deleteStationType);
+
+export default router;

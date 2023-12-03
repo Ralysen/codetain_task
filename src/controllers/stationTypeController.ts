@@ -1,6 +1,6 @@
-import {Request, Response} from "express";
-import {AppDataSource} from "../database/data-source";
-import {ChargingStation, StationType} from "../entity";
+import { Request, Response } from "express";
+import { AppDataSource } from "../database/data-source";
+import { StationType } from "../entity";
 
 export class StationTypeController {
     async getStationTypes(req: Request, res: Response): Promise<Response> {

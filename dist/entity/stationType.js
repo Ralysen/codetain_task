@@ -1,7 +1,4 @@
-/*
-stationType.hasMany(chargingStation, {
-    foreignKey: "charging_station_id"
-});*/
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11,43 +8,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { StationCurrentType } from "../enums";
-import { ChargingStation } from "./chargingStation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StationType = void 0;
+const typeorm_1 = require("typeorm");
+const enums_1 = require("../enums");
+const chargingStation_1 = require("./chargingStation");
 let StationType = class StationType {
-    id;
-    name;
-    plug_count;
-    efficiency;
-    current_type;
-    chargingStations;
 };
+exports.StationType = StationType;
 __decorate([
-    PrimaryGeneratedColumn("uuid"),
+    (0, typeorm_1.PrimaryGeneratedColumn)("uuid"),
     __metadata("design:type", String)
 ], StationType.prototype, "id", void 0);
 __decorate([
-    Column(),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], StationType.prototype, "name", void 0);
 __decorate([
-    Column("integer"),
+    (0, typeorm_1.Column)("integer"),
     __metadata("design:type", Number)
 ], StationType.prototype, "plug_count", void 0);
 __decorate([
-    Column("float"),
+    (0, typeorm_1.Column)("float"),
     __metadata("design:type", Number)
 ], StationType.prototype, "efficiency", void 0);
 __decorate([
-    Column(),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], StationType.prototype, "current_type", void 0);
 __decorate([
-    OneToMany(() => ChargingStation, (chargingStation) => chargingStation.stationType),
+    (0, typeorm_1.OneToMany)(() => chargingStation_1.ChargingStation, (chargingStation) => chargingStation.stationType),
     __metadata("design:type", Array)
 ], StationType.prototype, "chargingStations", void 0);
-StationType = __decorate([
-    Entity()
+exports.StationType = StationType = __decorate([
+    (0, typeorm_1.Entity)()
 ], StationType);
-export { StationType };
-//# sourceMappingURL=stationType.js.map

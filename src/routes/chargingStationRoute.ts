@@ -4,8 +4,10 @@ import { ChargingStationController } from "../controllers/chargingStationControl
 const chargingStationController = new ChargingStationController();
 const router = express.Router();
 
-router.get('/stations', chargingStationController.getStations);
-router.get('/station/:id', chargingStationController.getStation);
-router.post('/station', chargingStationController.createStation);
-router.put('/station/:id', chargingStationController.updateStation);
-router.delete('station/:id', chargingStationController.deleteStation);
+router.get('/', chargingStationController.getStations);
+router.get('/:id', chargingStationController.getStation);
+router.post('/', chargingStationController.createStation);
+router.put('/:id', chargingStationController.updateStation);
+router.delete('/:id', chargingStationController.deleteStation);
+
+export default router;
