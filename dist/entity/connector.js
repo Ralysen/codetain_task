@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,31 +7,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Connector = void 0;
-const typeorm_1 = require("typeorm");
-const chargingStation_1 = require("./chargingStation");
-const typeorm_2 = require("typeorm");
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { ChargingStation } from "./chargingStation";
+import { JoinColumn } from "typeorm";
 let Connector = class Connector {
+    id;
+    name;
+    priority;
+    chargingStation;
 };
-exports.Connector = Connector;
 __decorate([
-    (0, typeorm_1.PrimaryGeneratedColumn)("uuid"),
+    PrimaryGeneratedColumn("uuid"),
     __metadata("design:type", String)
 ], Connector.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    Column(),
     __metadata("design:type", String)
 ], Connector.prototype, "name", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    Column(),
     __metadata("design:type", Boolean)
 ], Connector.prototype, "priority", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => chargingStation_1.ChargingStation, (chargingStation) => chargingStation.connector),
-    (0, typeorm_2.JoinColumn)(),
-    __metadata("design:type", chargingStation_1.ChargingStation)
+    ManyToOne(() => ChargingStation, (chargingStation) => chargingStation.connector),
+    JoinColumn({ name: "charging_station_id" }),
+    __metadata("design:type", ChargingStation)
 ], Connector.prototype, "chargingStation", void 0);
-exports.Connector = Connector = __decorate([
-    (0, typeorm_1.Entity)()
+Connector = __decorate([
+    Entity()
 ], Connector);
+export { Connector };
+//# sourceMappingURL=connector.js.map

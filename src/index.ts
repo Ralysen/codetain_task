@@ -2,9 +2,7 @@ import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import "reflect-metadata";
-import {DataSource} from "typeorm";
-import {ChargingStation, Connector, StationType} from "./entity";
-import * as console from "console";
+import { AppDataSource } from "./database/data-source";
 
 dotenv.config();
 
@@ -15,21 +13,10 @@ const corsOption = {
     origin: '*',
     methods: 'GET, POST, DELETE, PUT'
 }
+
 app.use(cors(corsOption));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-const AppDataSource = new DataSource({
-    type: "mysql",
-    host: "localhost",
-    port: 3306,
-    username: "root",
-    password: "Qwerty1@",
-    database: "charger",
-    synchronize: true,
-    logging: true,
-    entities: [Connector, ChargingStation, StationType]
-});
 
 AppDataSource.initialize()
     .then(() => {
@@ -37,10 +24,6 @@ AppDataSource.initialize()
     })
     .catch((error) => console.error(error));
 
-app.get('/', (req, res) => {
-    res.json({message: "Hello, its me"});
-})
-
 app.listen(port, () => {
     console.log(`[server]: Server is running at http:localhost:${port}`);
-})
+});
