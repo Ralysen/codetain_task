@@ -2,12 +2,12 @@ import { ConnectorController } from "../controllers";
 import express from "express";
 
 const connectorController = new ConnectorController();
-const route = express.Router();
+const router = express.Router();
 
-route.get('/', connectorController.getConnectors);
-route.get('/:id', connectorController.getConnector);
-route.post('/', connectorController.createConnector);
-route.put('/:id', connectorController.updateConnector);
-route.delete('/:id', connectorController.deleteConnector);
+router.get('/', connectorController.getConnectors);
+router.get('/:id', connectorController.getConnector);
+router.post('/', connectorController.createConnector);
+router.put('/:id', connectorController.updateConnector);
+router.delete('/:id', connectorController.deleteConnector);
 
-export default route;
+export default router;

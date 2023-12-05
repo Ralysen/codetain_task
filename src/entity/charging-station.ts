@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Connector } from "./connector";
 import { StationType } from "./station-type";
 
@@ -19,10 +19,9 @@ export class ChargingStation {
     @Column()
     firmware_version: string
 
-    @OneToMany(() => Connector, (connector) => connector.chargingStation)
-    connector: Connector[]
+    @OneToMany(() => Connector, (connector) => connector.charging_station)
+    connector: Connector[];
 
-    @ManyToOne(() => StationType, (stationType) => stationType.chargingStations)
-    @JoinColumn({name: "station_type_id"})
-    stationType: StationType;
+    @ManyToOne(() => StationType, (stationType) => stationType.charging_stations)
+    station_type: StationType;
 }

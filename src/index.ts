@@ -3,10 +3,10 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import "reflect-metadata";
 import { AppDataSource } from "./database/data-source";
-import { ErrorHandler } from "./middleware/error-handler";
+import { ErrorHandler } from "./middleware";
+import stationTypeRoute from "./routes/station-type-route";
 import connectorRoute from "./routes/connector-route";
 import chargingStationRoute from "./routes/charging-station-route";
-import stationTypeRoute from "./routes/station-type-route";
 
 dotenv.config();
 

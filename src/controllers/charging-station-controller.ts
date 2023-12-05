@@ -1,59 +1,50 @@
 import { Request, Response } from "express";
-import { AppDataSource } from "../database/data-source";
-import { ChargingStation } from "../entity";
-import { ResponseUtils } from "../middleware/response-utils";
+import { ResponseUtils } from "../middleware";
+import ChargingStationService from "../services/charging-station-service";
 
 export class ChargingStationController {
     async getStations(req: Request, res: Response): Promise<Response> {
-        const stations = await AppDataSource.getRepository(ChargingStation).find();
+        const stations = await ChargingStationService.getAllStations();
         return ResponseUtils.sendResponse(res, stations, 200);
     }
 
-    async getStation(req: Request, res: Response): Promise<Response> {
+    async getStationById(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
-        const repo = AppDataSource.getRepository(ChargingStation);
-        const station = await repo.findOneBy({
-            id: id,
-        });
+        const station = await ChargingStationService.getStationById(id);
+
         if(!station){
             return ResponseUtils.sendError(res, "Station not found", 404);
         }
+
         return ResponseUtils.sendResponse(res, station, 200);
     }
 
     async createStation(req: Request, res: Response): Promise<Response> {
         const stationBody = req.body;
-        const repo = AppDataSource.getRepository(ChargingStation);
-        const station = repo.create(stationBody);
-        await repo.save(station);
-        return ResponseUtils.sendResponse(res, station, 200);
+        const newStation = await ChargingStationService.createStation(stationBody);
+        return ResponseUtils.sendResponse(res, newStation, 200);
     }
 
     async updateStation(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
         const stationBody = req.body;
-        const repo = AppDataSource.getRepository(ChargingStation);
-        const station = await repo.findOneBy({
-            id: id,
-        });
-        if(!station){
+        const updatedStation = await ChargingStationService.updateStation(id, stationBody);
+
+        if(!updatedStation){
             return ResponseUtils.sendError(res, "Station not found", 404);
         }
-        repo.merge(station, stationBody);
-        await repo.save((station));
-        return ResponseUtils.sendResponse(res, station, 200);
+
+        return ResponseUtils.sendResponse(res, updatedStation, 200);
     }
 
     async deleteStation(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
-        const repo = AppDataSource.getRepository(ChargingStation);
-        const station = await repo.findOneBy({
-            id: id,
-        });
-        if(!station) {
+        const stationToDelete = await ChargingStationService.deleteStation(id);
+
+        if(!stationToDelete) {
             return ResponseUtils.sendError(res, "Station not found", 404);
         }
-        await repo.remove(station);
-        return ResponseUtils.sendResponse(res, null);
+
+        return ResponseUtils.sendResponse(res, {message: "Station remove successfully"}, 200);
     }
 }

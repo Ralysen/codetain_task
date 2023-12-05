@@ -19,6 +19,6 @@ export class StationType {
     @Column()
     current_type: StationCurrentType
 
-    @OneToMany(() => ChargingStation, (chargingStation) => chargingStation.stationType)
-    chargingStations: ChargingStation[];
+    @OneToMany(() => ChargingStation, (chargingStation) => chargingStation.station_type)
+    charging_stations: ChargingStation[];
 }

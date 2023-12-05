@@ -5,7 +5,7 @@ const chargingStationController = new ChargingStationController();
 const router = express.Router();
 
 router.get('/', chargingStationController.getStations);
-router.get('/:id', chargingStationController.getStation);
+router.get('/:id', chargingStationController.getStationById);
 router.post('/', chargingStationController.createStation);
 router.put('/:id', chargingStationController.updateStation);
 router.delete('/:id', chargingStationController.deleteStation);

@@ -1,6 +1,5 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { ChargingStation } from "./charging-station";
-import { JoinColumn } from "typeorm";
 
 @Entity()
 export class Connector {
@@ -14,6 +13,5 @@ export class Connector {
     priority: boolean;
 
     @ManyToOne(() => ChargingStation, (chargingStation) => chargingStation.connector)
-    @JoinColumn({name: "charging_station_id"})
-    chargingStation: ChargingStation
+    charging_station: ChargingStation
 }

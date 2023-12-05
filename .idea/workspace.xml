@@ -4,24 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Express base data handling - add error handler">
-      <change afterPath="$PROJECT_DIR$/src/controllers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/response-utils.ts" afterDir="false" />
+    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="improving code readability">
+      <change afterPath="$PROJECT_DIR$/src/middleware/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/charging-station-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/connector-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/station-type-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/chargingStationController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/connectorController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/connector-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/stationTypeController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/chargingStation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/charging-station.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/connector-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/connector-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/charging-station.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/charging-station.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/connector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/connector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/stationType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/station-type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/stationCurrentType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/station-current-type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/station-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/station-type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/chargingStationRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/charging-station-route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/connectorRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/connector-route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/stationTypeRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/station-type-route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/errorHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/error-handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/charging-station-route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/charging-station-route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/connector-route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/connector-route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +54,9 @@
         <option name="url" value="https://github.com/Ralysen/codetain_task.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -131,7 +132,7 @@
       <workItem from="1701638633621" duration="100000" />
       <workItem from="1701675353843" duration="4484000" />
       <workItem from="1701714483268" duration="2509000" />
-      <workItem from="1701775965084" duration="2727000" />
+      <workItem from="1701775965084" duration="14150000" />
     </task>
     <task id="LOCAL-00001" summary="Base project configuration">
       <option name="closed" value="true" />
@@ -181,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701638673837</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="improving code readability">
+      <option name="closed" value="true" />
+      <created>1701780538303</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701780538303</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +208,7 @@
     <MESSAGE value="Sequalize to TypeORM change - clear code fix" />
     <MESSAGE value="Express base data handling - create routes and controllers" />
     <MESSAGE value="Express base data handling - add error handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Express base data handling - add error handler" />
+    <MESSAGE value="improving code readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="improving code readability" />
   </component>
 </project>
