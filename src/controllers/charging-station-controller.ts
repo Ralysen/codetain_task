@@ -1,10 +1,16 @@
 import { Request, Response } from "express";
 import { ResponseUtils } from "../middleware";
 import ChargingStationService from "../services/charging-station-service";
+import { Pagination } from "../middleware/pagination";
 
 export class ChargingStationController {
     async getStations(req: Request, res: Response): Promise<Response> {
-        const stations = await ChargingStationService.getAllStations();
+        const paginationSett = Pagination.handleQuery(req);
+        const stations = await ChargingStationService
+            .getAllStations(
+                paginationSett.page,
+                paginationSett.limit
+            );
         return ResponseUtils.sendResponse(res, stations, 200);
     }
 
