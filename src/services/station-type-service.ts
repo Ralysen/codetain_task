@@ -1,10 +1,16 @@
 import { StationType } from "../entity";
 import { AppDataSource } from "../database/data-source";
+import Pagination from "../middleware/pagination";
 
 export class StationTypeService {
-    async getAllStationTypes(): Promise<StationType[]> {
+    async getAllStationTypes(page: number = 1, pageSize: number = 5): Promise<{
+        result: StationType[],
+        total_count: number,
+        last_page: number,
+        actual_page: number
+    }> {
         const stationTypeRepo = AppDataSource.getRepository(StationType);
-        return await stationTypeRepo.find();
+        return Pagination.paginate(stationTypeRepo, page, pageSize);
     }
 
     async getStationTypeById(id: string): Promise<StationType | null> {

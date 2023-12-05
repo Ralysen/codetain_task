@@ -9,28 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Connector = void 0;
+exports.StationType = void 0;
 const typeorm_1 = require("typeorm");
+const enums_1 = require("../enums");
 const charging_station_1 = require("./charging-station");
-let Connector = class Connector {
+let StationType = class StationType {
 };
-exports.Connector = Connector;
+exports.StationType = StationType;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)("uuid"),
     __metadata("design:type", String)
-], Connector.prototype, "id", void 0);
+], StationType.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Connector.prototype, "name", void 0);
+], StationType.prototype, "name", void 0);
+__decorate([
+    (0, typeorm_1.Column)("integer"),
+    __metadata("design:type", Number)
+], StationType.prototype, "plug_count", void 0);
+__decorate([
+    (0, typeorm_1.Column)("float"),
+    __metadata("design:type", Number)
+], StationType.prototype, "efficiency", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
-    __metadata("design:type", Boolean)
-], Connector.prototype, "priority", void 0);
+    __metadata("design:type", String)
+], StationType.prototype, "current_type", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => charging_station_1.ChargingStation, (chargingStation) => chargingStation.connector),
-    __metadata("design:type", charging_station_1.ChargingStation)
-], Connector.prototype, "charging_station", void 0);
-exports.Connector = Connector = __decorate([
+    (0, typeorm_1.OneToMany)(() => charging_station_1.ChargingStation, (chargingStation) => chargingStation.station_type),
+    __metadata("design:type", Array)
+], StationType.prototype, "charging_stations", void 0);
+exports.StationType = StationType = __decorate([
     (0, typeorm_1.Entity)()
-], Connector);
+], StationType);

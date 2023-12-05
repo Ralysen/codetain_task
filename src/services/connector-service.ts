@@ -1,10 +1,16 @@
 import { Connector } from "../entity";
 import { AppDataSource } from "../database/data-source";
+import Pagination from "../middleware/pagination";
 
 export class ConnectorService {
-    async getAllConnectors(): Promise<Connector[]> {
+    async getAllConnectors(page: number = 1, pageSize: number = 5): Promise<{
+        result: Connector[],
+        total_count: number,
+        last_page: number,
+        actual_page: number
+    }> {
         const connectorRepo = AppDataSource.getRepository(Connector);
-        return await connectorRepo.find();
+        return Pagination.paginate(connectorRepo, page, pageSize);
     }
 
     async getConnectorById(id: string): Promise<Connector | null> {

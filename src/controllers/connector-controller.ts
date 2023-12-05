@@ -1,10 +1,15 @@
 import { Request, Response } from "express";
 import { ResponseUtils } from "../middleware";
 import ConnectorService from "../services/connector-service";
+import { Pagination } from "../middleware/pagination";
 
 export class ConnectorController {
     async getConnectors(req: Request, res: Response): Promise<Response> {
-        const connectors = await ConnectorService.getAllConnectors();
+        const paginationSett = Pagination.handleQuery(req);
+        const connectors = await ConnectorService.getAllConnectors(
+            paginationSett.page,
+            paginationSett.limit
+        );
         return ResponseUtils.sendResponse(res, connectors, 200);
     }
 
