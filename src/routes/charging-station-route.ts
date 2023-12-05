@@ -1,5 +1,5 @@
 import express from "express";
-import { ChargingStationController } from "../controllers/chargingStationController";
+import { ChargingStationController } from "../controllers";
 
 const chargingStationController = new ChargingStationController();
 const router = express.Router();

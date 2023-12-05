@@ -1,12 +1,12 @@
-import express, {NextFunction, Request, Response} from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import "reflect-metadata";
 import { AppDataSource } from "./database/data-source";
-import {ErrorHandler} from "./utils/errorHandler";
-import connectorRoute from "./routes/connectorRoute";
-import chargingStationRoute from "./routes/chargingStationRoute";
-import stationTypeRoute from "./routes/stationTypeRoute";
+import { ErrorHandler } from "./middleware/error-handler";
+import connectorRoute from "./routes/connector-route";
+import chargingStationRoute from "./routes/charging-station-route";
+import stationTypeRoute from "./routes/station-type-route";
 
 dotenv.config();
 
@@ -23,8 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/connectors", ErrorHandler.handleErrors(connectorRoute));
-app.use("/station", ErrorHandler.handleErrors(chargingStationRoute));
-app.use("/station/types", ErrorHandler.handleErrors(stationTypeRoute));
+app.use("/stations", ErrorHandler.handleErrors(chargingStationRoute));
+app.use("/station-types", ErrorHandler.handleErrors(stationTypeRoute));
 
 app.all("*", (req: Request, res: Response) => {
     return res.status(404).send({

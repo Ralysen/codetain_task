@@ -1,6 +1,6 @@
-import {Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import {Connector} from "./connector";
-import {StationType} from "./stationType";
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Connector } from "./connector";
+import { StationType } from "./station-type";
 
 @Entity()
 export class ChargingStation {

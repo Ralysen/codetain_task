@@ -1,6 +1,6 @@
-import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import {StationCurrentType} from "../enums";
-import {ChargingStation} from "./chargingStation";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { StationCurrentType } from "../enums";
+import { ChargingStation } from "./charging-station";
 
 @Entity()
 export class StationType {

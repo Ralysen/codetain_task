@@ -1,3 +1,3 @@
-export * from './chargingStation';
+export * from './charging-station';
 export * from './connector';
-export * from './stationType'
+export * from './station-type'

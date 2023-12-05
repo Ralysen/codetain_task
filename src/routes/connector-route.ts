@@ -1,4 +1,4 @@
-import { ConnectorController } from "../controllers/connectorController";
+import { ConnectorController } from "../controllers";
 import express from "express";
 
 const connectorController = new ConnectorController();

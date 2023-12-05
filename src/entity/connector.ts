@@ -1,5 +1,5 @@
-import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
-import {ChargingStation} from "./chargingStation";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { ChargingStation } from "./charging-station";
 import { JoinColumn } from "typeorm";
 
 @Entity()

@@ -1,1 +1,1 @@
-export * from './stationCurrentType';
+export * from './station-current-type';
