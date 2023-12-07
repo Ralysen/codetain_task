@@ -9,7 +9,6 @@ export class ChargingStationService {
         const alias = "charging_station"
         const chargingStationRepo = AppDataSource.getRepository(ChargingStation);
         const queryBuilder = chargingStationRepo.createQueryBuilder(alias);
-        const station = new ChargingStation();
 
         return QueryCreator.createQuery(req, queryBuilder, alias);
     }
