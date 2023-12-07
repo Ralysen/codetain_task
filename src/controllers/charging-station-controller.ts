@@ -1,16 +1,11 @@
 import { Request, Response } from "express";
 import { ResponseUtils } from "../middleware";
 import ChargingStationService from "../services/charging-station-service";
-import { Pagination } from "../middleware/pagination";
 
 export class ChargingStationController {
     async getStations(req: Request, res: Response): Promise<Response> {
-        const paginationSett = Pagination.handleQuery(req);
-        const stations = await ChargingStationService
-            .getAllStations(
-                paginationSett.page,
-                paginationSett.limit
-            );
+        const stations = await ChargingStationService.getAllStations(req);
+
         return ResponseUtils.sendResponse(res, stations, 200);
     }
 
@@ -28,6 +23,7 @@ export class ChargingStationController {
     async createStation(req: Request, res: Response): Promise<Response> {
         const stationBody = req.body;
         const newStation = await ChargingStationService.createStation(stationBody);
+
         return ResponseUtils.sendResponse(res, newStation, 200);
     }
 

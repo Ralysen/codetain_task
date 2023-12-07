@@ -14,23 +14,16 @@ class Pagination {
         }
         return { page, limit };
     }
-    async paginate(dataRepo, page, pageSize) {
-        const startIndex = (page - 1) * pageSize;
-        const next_page = page + 1;
-        let previous_page;
-        const [data, total_count] = await dataRepo
+    async paginate(dataRepo, page, limit) {
+        const startIndex = (page - 1) * limit;
+        const [result, total_count] = await dataRepo
             .createQueryBuilder('charging_station')
             .skip(startIndex)
-            .take(pageSize)
+            .take(limit)
             .getManyAndCount();
-        const last_page = Math.ceil(total_count / pageSize);
-        if (page > 1) {
-            previous_page = page - 1;
-        }
-        else {
-            previous_page = undefined;
-        }
-        return { data, total_count, next_page, previous_page, last_page };
+        const last_page = Math.ceil(total_count / limit);
+        const actual_page = page;
+        return { result, total_count, last_page, actual_page };
     }
 }
 exports.Pagination = Pagination;

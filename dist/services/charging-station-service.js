@@ -6,12 +6,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ChargingStationService = void 0;
 const entity_1 = require("../entity");
 const data_source_1 = require("../database/data-source");
-const pagination_1 = __importDefault(require("../middleware/pagination"));
+const queryCreator_1 = __importDefault(require("../middleware/queryCreator"));
 class ChargingStationService {
-    async getAllStations(page = 1, pageSize = 5) {
+    async getAllStations(req) {
         const chargingStationRepo = data_source_1.AppDataSource.getRepository(entity_1.ChargingStation);
-        return pagination_1.default.paginate(chargingStationRepo, page, pageSize);
-        //return await chargingStationRepo.find();
+        const queryBuilder = chargingStationRepo.createQueryBuilder("charging_station");
+        const station = new entity_1.ChargingStation();
+        return queryCreator_1.default.createQuery(req, queryBuilder, station);
     }
     async getStationById(id) {
         const chargingStationRepo = data_source_1.AppDataSource.getRepository(entity_1.ChargingStation);

@@ -1,20 +1,21 @@
 import { Connector } from "../entity";
 import { AppDataSource } from "../database/data-source";
-import Pagination from "../middleware/pagination";
+import { PaginationResponse } from "../support/interfaces/pagination-response";
+import { Request } from "express";
+import QueryCreator from "../middleware/queryCreator";
 
 export class ConnectorService {
-    async getAllConnectors(page: number = 1, pageSize: number = 5): Promise<{
-        result: Connector[],
-        total_count: number,
-        last_page: number,
-        actual_page: number
-    }> {
+    async getAllConnectors(req: Request): Promise<PaginationResponse<Connector>> {
+        const alias = "connector";
         const connectorRepo = AppDataSource.getRepository(Connector);
-        return Pagination.paginate(connectorRepo, page, pageSize);
+        const queryBuilder = connectorRepo.createQueryBuilder(alias);
+
+        return QueryCreator.createQuery(req, queryBuilder, alias);
     }
 
     async getConnectorById(id: string): Promise<Connector | null> {
         const connectorRepo = AppDataSource.getRepository(Connector);
+
         return await connectorRepo.findOneBy({
             id: id,
         });
@@ -23,6 +24,7 @@ export class ConnectorService {
     async createConnector(connectorData: Partial<Connector>): Promise<Connector> {
         const connectorRepo = AppDataSource.getRepository(Connector);
         const newConnector = connectorRepo.create(connectorData);
+
         return await connectorRepo.save(newConnector);
     }
 

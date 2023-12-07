@@ -1,20 +1,21 @@
 import { StationType } from "../entity";
 import { AppDataSource } from "../database/data-source";
-import Pagination from "../middleware/pagination";
+import { PaginationResponse } from "../support/interfaces/pagination-response";
+import {Request} from "express";
+import QueryCreator from "../middleware/queryCreator";
 
 export class StationTypeService {
-    async getAllStationTypes(page: number = 1, pageSize: number = 5): Promise<{
-        result: StationType[],
-        total_count: number,
-        last_page: number,
-        actual_page: number
-    }> {
+    async getAllStationTypes(req: Request): Promise<PaginationResponse<StationType>> {
+        const alias = "station_type";
         const stationTypeRepo = AppDataSource.getRepository(StationType);
-        return Pagination.paginate(stationTypeRepo, page, pageSize);
+        const queryBuilder = stationTypeRepo.createQueryBuilder(alias);
+
+        return QueryCreator.createQuery(req, queryBuilder, alias)
     }
 
     async getStationTypeById(id: string): Promise<StationType | null> {
         const stationTypeRepo = AppDataSource.getRepository(StationType);
+
         return await stationTypeRepo.findOneBy({
             id: id,
         });
@@ -23,6 +24,7 @@ export class StationTypeService {
     async createStationType(stationTypeData: Partial<StationType>): Promise<StationType> {
         const stationTypeRepo = AppDataSource.getRepository(StationType);
         const newStationType = stationTypeRepo.create(stationTypeData);
+
         return await stationTypeRepo.save(newStationType);
     }
 
@@ -37,6 +39,7 @@ export class StationTypeService {
         }
 
         stationTypeRepo.merge(existingStationType, StationTypeNewData);
+
         return await stationTypeRepo.save(existingStationType);
     }
 
@@ -51,6 +54,7 @@ export class StationTypeService {
         }
 
         await stationTypeRepo.remove(stationTypeToRemove);
+
         return true;
     }
 }

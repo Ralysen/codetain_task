@@ -37,7 +37,7 @@ __decorate([
     __metadata("design:type", String)
 ], ChargingStation.prototype, "firmware_version", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)(() => connector_1.Connector, (connector) => connector.charging_station),
+    (0, typeorm_1.OneToMany)(() => connector_1.Connector, (connectors) => connectors.charging_station),
     __metadata("design:type", Array)
 ], ChargingStation.prototype, "connector", void 0);
 __decorate([

@@ -6,9 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConnectorController = void 0;
 const middleware_1 = require("../middleware");
 const connector_service_1 = __importDefault(require("../services/connector-service"));
+const pagination_1 = require("../middleware/pagination");
 class ConnectorController {
     async getConnectors(req, res) {
-        const connectors = await connector_service_1.default.getAllConnectors();
+        const paginationSett = pagination_1.Pagination.handleQuery(req);
+        const connectors = await connector_service_1.default.getAllConnectors(paginationSett.page, paginationSett.limit);
         return middleware_1.ResponseUtils.sendResponse(res, connectors, 200);
     }
     async getConnector(req, res) {
