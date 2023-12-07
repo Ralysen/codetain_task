@@ -1,12 +1,16 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConnectorService = void 0;
 const entity_1 = require("../entity");
 const data_source_1 = require("../database/data-source");
+const pagination_1 = __importDefault(require("../middleware/pagination"));
 class ConnectorService {
-    async getAllConnectors() {
+    async getAllConnectors(page = 1, pageSize = 5) {
         const connectorRepo = data_source_1.AppDataSource.getRepository(entity_1.Connector);
-        return await connectorRepo.find();
+        return pagination_1.default.paginate(connectorRepo, page, pageSize);
     }
     async getConnectorById(id) {
         const connectorRepo = data_source_1.AppDataSource.getRepository(entity_1.Connector);

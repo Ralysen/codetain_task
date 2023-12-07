@@ -6,9 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.StationTypeController = void 0;
 const middleware_1 = require("../middleware");
 const station_type_service_1 = __importDefault(require("../services/station-type-service"));
+const pagination_1 = require("../middleware/pagination");
 class StationTypeController {
     async getStationTypes(req, res) {
-        const stationTypes = await station_type_service_1.default.getAllStationTypes();
+        const paginationSett = pagination_1.Pagination.handleQuery(req);
+        const stationTypes = await station_type_service_1.default.getAllStationTypes(paginationSett.page, paginationSett.limit);
         return middleware_1.ResponseUtils.sendResponse(res, stationTypes, 200);
     }
     async getStationType(req, res) {

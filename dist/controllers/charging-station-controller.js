@@ -6,12 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ChargingStationController = void 0;
 const middleware_1 = require("../middleware");
 const charging_station_service_1 = __importDefault(require("../services/charging-station-service"));
-const pagination_1 = require("../middleware/pagination");
 class ChargingStationController {
     async getStations(req, res) {
-        const paginationSett = pagination_1.Pagination.handleQuery(req);
         const stations = await charging_station_service_1.default
-            .getAllStations(paginationSett.page, paginationSett.limit);
+            .getAllStations(req);
         return middleware_1.ResponseUtils.sendResponse(res, stations, 200);
     }
     async getStationById(req, res) {

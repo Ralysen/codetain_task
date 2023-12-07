@@ -1,20 +1,21 @@
 import { ChargingStation } from "../entity";
 import { AppDataSource } from "../database/data-source";
-import Pagination from "../middleware/pagination";
+import { PaginationResponse } from "../support/interfaces/pagination-response";
+import { Request } from "express";
+import QueryCreator from "../middleware/queryCreator";
 
 export class ChargingStationService {
-    async getAllStations(page: number = 1, pageSize: number = 5): Promise<{
-        result: ChargingStation[],
-        total_count: number,
-        last_page: number,
-        actual_page: number
-    }> {
+    async getAllStations(req: Request): Promise<PaginationResponse<ChargingStation>> {
+        const alias = "charging_station"
         const chargingStationRepo = AppDataSource.getRepository(ChargingStation);
-        return Pagination.paginate(chargingStationRepo, page, pageSize);
+        const queryBuilder = chargingStationRepo.createQueryBuilder(alias);
+
+        return QueryCreator.createQuery(req, queryBuilder, alias);
     }
 
     async getStationById(id: string): Promise<ChargingStation | null> {
         const chargingStationRepo = AppDataSource.getRepository(ChargingStation);
+
         return await chargingStationRepo.findOneBy({
             id: id,
         });
@@ -23,6 +24,7 @@ export class ChargingStationService {
     async createStation(stationData: Partial<ChargingStation>): Promise<ChargingStation> {
         const chargingStationRepo = AppDataSource.getRepository(ChargingStation);
         const newStation = chargingStationRepo.create(stationData);
+
         return await chargingStationRepo.save(newStation);
     }
 
@@ -37,6 +39,7 @@ export class ChargingStationService {
         }
 
         chargingStationRepo.merge(existingStation, stationNewData);
+
         return await chargingStationRepo.save(existingStation);
     }
 
@@ -50,6 +53,7 @@ export class ChargingStationService {
             return false;
         }
         await chargingStationRepo.remove(stationToRemove);
+
         return true;
     }
 }

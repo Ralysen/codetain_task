@@ -1,15 +1,10 @@
 import { Request, Response } from "express";
 import { ResponseUtils } from "../middleware";
 import StationTypeService from "../services/station-type-service";
-import { Pagination } from "../middleware/pagination";
 
 export class StationTypeController {
     async getStationTypes(req: Request, res: Response): Promise<Response> {
-        const paginationSett = Pagination.handleQuery(req);
-        const stationTypes = await StationTypeService.getAllStationTypes(
-            paginationSett.page,
-            paginationSett.limit
-        );
+        const stationTypes = await StationTypeService.getAllStationTypes(req);
         return ResponseUtils.sendResponse(res, stationTypes, 200);
     }
 

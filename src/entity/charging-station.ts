@@ -19,7 +19,7 @@ export class ChargingStation {
     @Column()
     firmware_version: string
 
-    @OneToMany(() => Connector, (connector) => connector.charging_station)
+    @OneToMany(() => Connector, (connectors) => connectors.charging_station)
     connector: Connector[];
 
     @ManyToOne(() => StationType, (stationType) => stationType.charging_stations)
