@@ -1,13 +1,14 @@
 import express from "express";
 import { StationTypeController } from "../controllers";
+import { TokenHandler } from "../middleware/token-handler";
 
 const stationTypeController = new StationTypeController();
 const router = express.Router();
 
-router.get('/', stationTypeController.getStationTypes);
-router.get('/:id', stationTypeController.getStationType);
-router.post('/', stationTypeController.createStationType);
-router.put('/:id', stationTypeController.updateStationType);
-router.delete('/:id', stationTypeController.deleteStationType);
+router.get('/', [TokenHandler], stationTypeController.getStationTypes);
+router.get('/:id', [TokenHandler], stationTypeController.getStationType);
+router.post('/', [TokenHandler], stationTypeController.createStationType);
+router.put('/:id', [TokenHandler], stationTypeController.updateStationType);
+router.delete('/:id', [TokenHandler], stationTypeController.deleteStationType);
 
 export default router;

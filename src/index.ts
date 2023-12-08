@@ -7,6 +7,8 @@ import { ErrorHandler } from "./middleware";
 import stationTypeRoute from "./routes/station-type-route";
 import connectorRoute from "./routes/connector-route";
 import chargingStationRoute from "./routes/charging-station-route";
+import authRoute from "./routes/auth-route";
+import userRoute from "./routes/user-route";
 
 dotenv.config();
 
@@ -22,6 +24,8 @@ app.use(cors(corsOption));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/", ErrorHandler.handleErrors(authRoute));
+app.use("/user", ErrorHandler.handleErrors(userRoute));
 app.use("/connectors", ErrorHandler.handleErrors(connectorRoute));
 app.use("/stations", ErrorHandler.handleErrors(chargingStationRoute));
 app.use("/station-types", ErrorHandler.handleErrors(stationTypeRoute));

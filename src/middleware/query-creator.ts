@@ -1,7 +1,7 @@
 import { SelectQueryBuilder } from "typeorm";
 import { Request } from "express";
 import { PaginationResponse } from "../support/interfaces/pagination-response";
-import { QueryResult } from "../support/classes/queryResult";
+import { QueryResult } from "../support/classes/query-result";
 
 export class QueryCreator {
     async createQuery (

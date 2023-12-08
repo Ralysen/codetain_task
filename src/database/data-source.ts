@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 import * as dotenv from 'dotenv';
-import { ChargingStation, Connector, StationType } from "../entity";
+import {ChargingStation, Connector, StationType, User} from "../entity";
 import * as process from "process";
 
 dotenv.config();
@@ -14,6 +14,6 @@ export const AppDataSource = new DataSource({
     database: process.env.DB_NAME || "charger",
     synchronize: true,
     logging: true,
-    entities: [Connector, ChargingStation, StationType],
+    entities: [Connector, ChargingStation, StationType, User],
     migrations: [/*...*/]
 });

@@ -1,8 +1,8 @@
 import { StationType } from "../entity";
 import { AppDataSource } from "../database/data-source";
 import { PaginationResponse } from "../support/interfaces/pagination-response";
-import {Request} from "express";
-import QueryCreator from "../middleware/queryCreator";
+import { Request } from "express";
+import QueryCreator from "../middleware/query-creator";
 
 export class StationTypeService {
     async getAllStationTypes(req: Request): Promise<PaginationResponse<StationType>> {
