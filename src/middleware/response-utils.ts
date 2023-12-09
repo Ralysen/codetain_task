@@ -1,4 +1,5 @@
 import { Response } from "express";
+import * as console from "console";
 
 export  class ResponseUtils {
     static sendResponse<T>(
@@ -6,6 +7,9 @@ export  class ResponseUtils {
         data: T,
         statusCode = 200
     ): Response<T> {
+        const timestamp = new Date().toISOString();
+        console.log(`${timestamp} [INFO] [API]: ${data}`)
+
         return res.status(statusCode).send({
             success: true,
             message: "Success",
@@ -19,6 +23,9 @@ export  class ResponseUtils {
     statusCode = 500,
     errors?: any
     ): Response {
+        const timestamp = new Date().toISOString();
+        console.error(`${timestamp} [Error]: ${message}`)
+
         return res.status(statusCode).send({
             success: false,
             message,

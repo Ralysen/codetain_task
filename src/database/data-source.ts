@@ -13,7 +13,7 @@ export const AppDataSource = new DataSource({
     password: process.env.DB_PASSWORD || "Qwerty1@",
     database: process.env.DB_NAME || "charger",
     synchronize: true,
-    logging: true,
+    logging: false,
     entities: [Connector, ChargingStation, StationType, User],
     migrations: [/*...*/]
 });
