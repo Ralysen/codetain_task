@@ -2,7 +2,7 @@ import { ChargingStation } from "../entity";
 import { AppDataSource } from "../database/data-source";
 import { PaginationResponse } from "../support/interfaces/pagination-response";
 import { Request } from "express";
-import QueryCreator from "../middleware/queryCreator";
+import QueryCreator from "../middleware/query-creator";
 
 export class ChargingStationService {
     async getAllStations(req: Request): Promise<PaginationResponse<ChargingStation>> {

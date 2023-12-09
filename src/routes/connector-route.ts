@@ -1,13 +1,14 @@
 import { ConnectorController } from "../controllers";
 import express from "express";
+import { TokenHandler } from "../middleware/token-handler";
 
 const connectorController = new ConnectorController();
 const router = express.Router();
 
-router.get('/', connectorController.getConnectors);
-router.get('/:id', connectorController.getConnector);
-router.post('/', connectorController.createConnector);
-router.put('/:id', connectorController.updateConnector);
-router.delete('/:id', connectorController.deleteConnector);
+router.get('/', [TokenHandler], connectorController.getConnectors);
+router.get('/:id', [TokenHandler], connectorController.getConnector);
+router.post('/', [TokenHandler], connectorController.createConnector);
+router.put('/:id', [TokenHandler], connectorController.updateConnector);
+router.delete('/:id', [TokenHandler], connectorController.deleteConnector);
 
 export default router;

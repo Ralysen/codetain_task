@@ -17,7 +17,7 @@ export  class ResponseUtils {
     res: Response,
     message: string,
     statusCode = 500,
-    errors: any = null
+    errors?: any
     ): Response {
         return res.status(statusCode).send({
             success: false,
