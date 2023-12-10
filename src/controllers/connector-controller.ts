@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import { ResponseUtils } from "../middleware";
-import {AppDataSource} from "../database/data-source";
-import {Connector} from "../entity";
+import { AppDataSource } from "../database/data-source";
+import { Connector } from "../entity";
 import QueryCreator from "../middleware/query-creator";
-import {validate} from "class-validator";
+import { validate } from "class-validator";
 
 export class ConnectorController {
     async getConnectors(req: Request, res: Response): Promise<Response> {
@@ -70,17 +70,19 @@ export class ConnectorController {
         const { id } = req.params;
         const connectorRepo = AppDataSource.getRepository(Connector);
         let connectorToRemove;
+
         try {
+
             try {
                 connectorToRemove = await connectorRepo.findOneByOrFail({ id: id });
             } catch (error) {
                 return ResponseUtils.sendError(res, "Can't find specified connector", 404);
             }
+
             await connectorRepo.remove(connectorToRemove);
             return ResponseUtils.sendResponse(res, connectorToRemove, 200);
         } catch (error) {
             return ResponseUtils.sendError(res, "Can't remove connector", 500);
         }
-
     }
 }

@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import { ResponseUtils } from "../middleware";
-import {AppDataSource} from "../database/data-source";
-import {ChargingStation} from "../entity";
+import { AppDataSource } from "../database/data-source";
+import {ChargingStation, Connector} from "../entity";
 import QueryCreator from "../middleware/query-creator";
-import {validate} from "class-validator";
+import { validate } from "class-validator";
 
 export class ChargingStationController {
     async getStations(req: Request, res: Response): Promise<Response> {
@@ -98,6 +98,46 @@ export class ChargingStationController {
             return ResponseUtils.sendResponse(res, {message: "Station remove successfully"}, 200);
         } catch (error) {
             return ResponseUtils.sendError(res, "Can't remove station", 500);
+        }
+    }
+
+    async getType(req: Request, res: Response):Promise<Response> {
+        const { id } = req.params;
+        const chargingStationRepo = AppDataSource.getRepository(ChargingStation);
+
+        try {
+            const station = await chargingStationRepo.findOneOrFail( {
+                where: {
+                    id
+                },
+                relations: {
+                    station_type: true
+                }
+            })
+            const stationType = station.station_type;
+            return ResponseUtils.sendResponse(res, { stationType }, 200);
+        } catch (error) {
+            return ResponseUtils.sendError(res, "Can't find station with specified id", 404);
+        }
+    }
+
+    async getStationConnectors(req: Request, res: Response): Promise<Response> {
+        const { id } = req.params;
+        const chargingStationRepo = AppDataSource.getRepository(ChargingStation);
+
+        try {
+            const station = await chargingStationRepo.findOneOrFail({
+                where: {
+                    id
+                },
+                relations: {
+                    connector: true
+                }
+            });
+            const stationConnectors: Connector[] = station.connector;
+            return ResponseUtils.sendResponse(res, { stationConnectors }, 200);
+        } catch (error) {
+            return ResponseUtils.sendError(res, "Can't find station with specified id", 404);
         }
     }
 }

@@ -3,7 +3,7 @@ import { ResponseUtils } from "../middleware";
 import { AppDataSource } from "../database/data-source";
 import { StationType } from "../entity";
 import QueryCreator from "../middleware/query-creator";
-import {validate} from "class-validator";
+import { validate } from "class-validator";
 
 export class StationTypeController {
     async getStationTypes(req: Request, res: Response): Promise<Response> {

@@ -10,5 +10,7 @@ router.get('/:id', [TokenHandler], chargingStationController.getStationById);
 router.post('/', [TokenHandler], chargingStationController.createStation);
 router.put('/:id', [TokenHandler], chargingStationController.updateStation);
 router.delete('/:id', [TokenHandler], chargingStationController.deleteStation);
+router.get('/:id/type', [TokenHandler], chargingStationController.getType);
+router.get('/:id/connectors', [TokenHandler], chargingStationController.getStationConnectors);
 
 export default router;
