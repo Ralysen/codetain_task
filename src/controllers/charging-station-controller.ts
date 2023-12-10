@@ -1,9 +1,9 @@
-import {Request, Response} from "express";
-import {ResponseUtils} from "../middleware";
-import {AppDataSource} from "../database/data-source";
-import {ChargingStation, Connector, StationType} from "../entity";
+import { Request, Response } from "express";
+import { ResponseUtils } from "../middleware";
+import { AppDataSource } from "../database/data-source";
+import { ChargingStation, Connector, StationType } from "../entity";
 import QueryCreator from "../middleware/query-creator";
-import {validate} from "class-validator";
+import { validate } from "class-validator";
 
 export class ChargingStationController {
     async getStations(req: Request, res: Response): Promise<Response> {
@@ -49,7 +49,7 @@ export class ChargingStationController {
 
             return ResponseUtils.sendResponse(res, newStation, 200);
         } catch (error) {
-            return ResponseUtils.sendError(res, "Can't create station", 500);
+            return ResponseUtils.sendError(res, "Bad request", 500);
         }
     }
 
