@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Add additional routes for relational data handle">
+    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Change response handling for controllers: connector, station-type, user and token-handler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth-controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/charging-station-route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/charging-station-route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/connector-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/connector-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/response-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/response-utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;charger-development-database-model-handling&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;charger-development-error-handling&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.9.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.9.0&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -77,6 +80,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Repos\charger\src\support" />
       <recent name="D:\Repos\charger\app" />
     </key>
   </component>
@@ -125,7 +129,6 @@
       <workItem from="1701960101667" duration="20671000" />
       <workItem from="1702035541826" duration="26393000" />
       <workItem from="1702111762952" duration="10894000" />
-      <workItem from="1702202206827" duration="13899000" />
     </task>
     <task id="LOCAL-00001" summary="Base project configuration">
       <option name="closed" value="true" />
@@ -191,21 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702079808679</updated>
     </task>
-    <task id="LOCAL-00009" summary="Remove services.">
+    <task id="LOCAL-00009" summary="Change response handling for controllers: auth and charging-station">
       <option name="closed" value="true" />
-      <created>1702137610732</created>
+      <created>1702233635454</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1702137610732</updated>
+      <updated>1702233635454</updated>
     </task>
-    <task id="LOCAL-00010" summary="Add additional routes for relational data handle">
+    <task id="LOCAL-00010" summary="Change response handling for controllers: connector, station-type, user and token-handler">
       <option name="closed" value="true" />
-      <created>1702212511246</created>
+      <created>1702236438604</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1702212511246</updated>
+      <updated>1702236438604</updated>
     </task>
     <option name="localTasksCounter" value="11" />
     <servers />
@@ -227,23 +230,17 @@
     <MESSAGE value="Express base data handling - add error handler" />
     <MESSAGE value="improving code readability" />
     <MESSAGE value="Add basic authorization - secure api with token, token generate" />
-    <MESSAGE value="Remove services." />
-    <MESSAGE value="Add additional routes for relational data handle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add additional routes for relational data handle" />
+    <MESSAGE value="Change response handling for controllers: auth and charging-station" />
+    <MESSAGE value="Change response handling for controllers: connector, station-type, user and token-handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change response handling for controllers: connector, station-type, user and token-handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/dist/controllers/user-controller.js</url>
-          <line>17</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/dist/controllers/charging-station-controller.js</url>
-          <line>161</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="29" />
+          <url>file://$PROJECT_DIR$/dist/middleware/token-handler.js</url>
+          <line>33</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
