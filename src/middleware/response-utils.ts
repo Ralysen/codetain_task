@@ -1,14 +1,20 @@
 import { Response } from "express";
 import * as console from "console";
+import {LogLevels, ResponseCodes} from "../support/enums";
+import {ErrorHandler} from "./error-handler";
+import {ResponseMessages} from "../support/objects/responseMessages";
 
 export  class ResponseUtils {
     static sendResponse<T>(
         res: Response,
-        data: T,
-        statusCode = 200
+        message: string,
+        statusCode = 200,
+        resMessage: string,
+        context: string,
+        data?: T
     ): Response<T> {
         const timestamp = new Date().toISOString();
-        console.log(`${timestamp} [INFO] [API]: ${data}`)
+        console.log(`${timestamp} [${LogLevels.INFO}] [${context}]: ${resMessage} => ${message}`)
 
         return res.status(statusCode).send({
             success: true,
@@ -21,15 +27,16 @@ export  class ResponseUtils {
     res: Response,
     message: string,
     statusCode = 500,
+    resMessage: string,
+    context: string,
     errors?: any
     ): Response {
         const timestamp = new Date().toISOString();
-        console.error(`${timestamp} [Error]: ${message}`)
-
+        console.error(`${timestamp} [${LogLevels.ERROR}] [${context}]: ${resMessage} => ${message}`)
         return res.status(statusCode).send({
             success: false,
             message,
-            errors
+            errors: errors?.message
         });
     }
 }

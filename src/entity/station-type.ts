@@ -1,5 +1,5 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { StationCurrentType } from "../enums";
+import { StationCurrentType } from "../support/enums";
 import { ChargingStation } from "./charging-station";
 
 @Entity()
