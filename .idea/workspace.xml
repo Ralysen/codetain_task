@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Add basic authorization - secure api with token, token generate">
-      <change afterPath="$PROJECT_DIR$/src/support/enums/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/support/enums/log-levels.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/support/enums/responseCodes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/support/objects/responseMessages.ts" afterDir="false" />
+    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Change response handling for controllers: auth and charging-station">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/data-source.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/data-source.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/station-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/station-type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/station-current-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/support/enums/station-current-type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/response-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/response-utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/connector-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/connector-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/token-handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/token-handler.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702079808679</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Change response handling for controllers: auth and charging-station">
+      <option name="closed" value="true" />
+      <created>1702233635454</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702233635454</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +221,8 @@
     <MESSAGE value="Express base data handling - add error handler" />
     <MESSAGE value="improving code readability" />
     <MESSAGE value="Add basic authorization - secure api with token, token generate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add basic authorization - secure api with token, token generate" />
+    <MESSAGE value="Change response handling for controllers: auth and charging-station" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change response handling for controllers: auth and charging-station" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
