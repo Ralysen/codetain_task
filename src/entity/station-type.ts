@@ -16,7 +16,11 @@ export class StationType {
     @Column("float")
     efficiency: number
 
-    @Column()
+    @Column({
+        type: "enum",
+        enum: StationCurrentType,
+        default: StationCurrentType.AC
+    })
     current_type: StationCurrentType
 
     @OneToMany(() => ChargingStation, (chargingStation) => chargingStation.station_type)

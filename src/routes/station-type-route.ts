@@ -10,5 +10,6 @@ router.get('/:id', [TokenHandler], stationTypeController.getStationType);
 router.post('/', [TokenHandler], stationTypeController.createStationType);
 router.put('/:id', [TokenHandler], stationTypeController.updateStationType);
 router.delete('/:id', [TokenHandler], stationTypeController.deleteStationType);
+router.get('/:id/stations', [TokenHandler]);
 
 export default router;

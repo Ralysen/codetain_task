@@ -4,36 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Add basic authorization - secure api with token, token generate">
+    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Add additional routes for relational data handle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/controllers/charging-station-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/charging-station-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/controllers/connector-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/connector-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/controllers/station-type-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/station-type-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/database/data-source.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/database/data-source.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entity/charging-station.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entity/charging-station.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entity/connector.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entity/connector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entity/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entity/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entity/station-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entity/station-type.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/enums/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/station-current-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/enums/station-current-type.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/middleware/error-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/middleware/error-handler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/middleware/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/middleware/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/middleware/response-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/middleware/response-utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/routes/charging-station-route.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/routes/charging-station-route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/routes/connector-route.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/routes/connector-route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/routes/station-type-route.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/routes/station-type-route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/charging-station-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/services/charging-station-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/connector-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/services/connector-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/station-type-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/services/station-type-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/query-creator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/query-creator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/response-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/response-utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/token-handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/token-handler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/support/classes/query-result.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/charging-station-route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/charging-station-route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +62,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;charger-development-authorization&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;charger-development-database-model-handling&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.9.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.9.0&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -151,6 +125,7 @@
       <workItem from="1701960101667" duration="20671000" />
       <workItem from="1702035541826" duration="26393000" />
       <workItem from="1702111762952" duration="10894000" />
+      <workItem from="1702202206827" duration="13899000" />
     </task>
     <task id="LOCAL-00001" summary="Base project configuration">
       <option name="closed" value="true" />
@@ -216,7 +191,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702079808679</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Remove services.">
+      <option name="closed" value="true" />
+      <created>1702137610732</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702137610732</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add additional routes for relational data handle">
+      <option name="closed" value="true" />
+      <created>1702212511246</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702212511246</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,16 +227,23 @@
     <MESSAGE value="Express base data handling - add error handler" />
     <MESSAGE value="improving code readability" />
     <MESSAGE value="Add basic authorization - secure api with token, token generate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add basic authorization - secure api with token, token generate" />
+    <MESSAGE value="Remove services." />
+    <MESSAGE value="Add additional routes for relational data handle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add additional routes for relational data handle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/dist/middleware/token-handler.js</url>
-          <line>33</line>
+          <url>file://$PROJECT_DIR$/dist/controllers/user-controller.js</url>
+          <line>17</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/dist/controllers/charging-station-controller.js</url>
+          <line>161</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

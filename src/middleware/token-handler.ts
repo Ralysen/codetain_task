@@ -5,6 +5,11 @@ import { ResponseUtils } from './response-utils';
 
 export const TokenHandler = (req: Request, res: Response, next: NextFunction) => {
     let token = req.headers['authorization'] as string;
+
+    if(!token) {
+        return ResponseUtils.sendError(res, 'Unauthorized', 401);
+    }
+
     token = token.split(' ')[1];
     let jwtPayload;
 

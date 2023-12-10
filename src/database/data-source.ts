@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 import * as dotenv from 'dotenv';
-import {ChargingStation, Connector, StationType, User} from "../entity";
+import { ChargingStation, Connector, StationType, User } from "../entity";
 import * as process from "process";
 
 dotenv.config();
