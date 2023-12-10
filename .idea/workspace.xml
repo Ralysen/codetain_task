@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Change response handling for controllers: auth and charging-station">
+    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Change response handling for controllers: connector, station-type, user and token-handler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/connector-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/connector-controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/token-handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/token-handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/response-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/response-utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702233635454</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Change response handling for controllers: connector, station-type, user and token-handler">
+      <option name="closed" value="true" />
+      <created>1702236438604</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702236438604</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +231,8 @@
     <MESSAGE value="improving code readability" />
     <MESSAGE value="Add basic authorization - secure api with token, token generate" />
     <MESSAGE value="Change response handling for controllers: auth and charging-station" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change response handling for controllers: auth and charging-station" />
+    <MESSAGE value="Change response handling for controllers: connector, station-type, user and token-handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change response handling for controllers: connector, station-type, user and token-handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -40,7 +40,7 @@ export class AuthController {
             return ResponseUtils.sendResponse(res, "Login successfully", ResponseCodes.SUCCESS, ResponseMessages[ResponseCodes.SUCCESS], "AuthController.login()", {token: token});
 
         } catch (error) {
-            return ResponseUtils.sendError(res, "Login failed", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext, {error: error});
+            return ResponseUtils.sendError(res, "Login failed", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext, error);
         }
     }
 

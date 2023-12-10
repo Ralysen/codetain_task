@@ -1,9 +1,9 @@
 import * as jwt from 'jsonwebtoken';
 import config from '../config/config';
-import {NextFunction, Request, Response} from 'express';
-import {ResponseUtils} from './response-utils';
-import {ResponseCodes} from "../support/enums";
-import {ResponseMessages} from "../support/objects/responseMessages";
+import { NextFunction, Request, Response } from 'express';
+import { ResponseUtils } from './response-utils';
+import { ResponseCodes } from "../support/enums";
+import { ResponseMessages } from "../support/objects/responseMessages";
 
 export const TokenHandler = (req: Request, res: Response, next: NextFunction) => {
     let token = req.headers['authorization'] as string;
@@ -35,7 +35,7 @@ export const TokenHandler = (req: Request, res: Response, next: NextFunction) =>
         jwtPayload = jwt.verify(token, config.jwtSecret) as any;
         res.locals.jwtPayload = jwtPayload;
     } catch (error) {
-        return ResponseUtils.sendError(res, "Error decode token", ResponseCodes.UNAUTHORIZED, ResponseMessages[ResponseCodes.UNAUTHORIZED], logContext, error);
+        return ResponseUtils.sendError(res, "Invalid token", ResponseCodes.UNAUTHORIZED, ResponseMessages[ResponseCodes.UNAUTHORIZED], logContext);
 
     }
 

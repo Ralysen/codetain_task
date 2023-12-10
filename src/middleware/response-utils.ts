@@ -1,8 +1,6 @@
 import { Response } from "express";
-import * as console from "console";
-import {LogLevels, ResponseCodes} from "../support/enums";
-import {ErrorHandler} from "./error-handler";
-import {ResponseMessages} from "../support/objects/responseMessages";
+import { LogLevels } from "../support/enums";
+
 
 export  class ResponseUtils {
     static sendResponse<T>(
@@ -14,12 +12,16 @@ export  class ResponseUtils {
         data?: T
     ): Response<T> {
         const timestamp = new Date().toISOString();
-        console.log(`${timestamp} [${LogLevels.INFO}] [${context}]: ${resMessage} => ${message}`)
+        if (message === "") {
+            console.log(`${timestamp} [${LogLevels.INFO}] [${context}]: ${resMessage}`);
+        } else {
+            console.log(`${timestamp} [${LogLevels.INFO}] [${context}]: ${resMessage} => ${message}`);
+        }
 
         return res.status(statusCode).send({
             success: true,
             message: "Success",
-            data,
+            data
         });
     }
 
@@ -32,7 +34,11 @@ export  class ResponseUtils {
     errors?: any
     ): Response {
         const timestamp = new Date().toISOString();
-        console.error(`${timestamp} [${LogLevels.ERROR}] [${context}]: ${resMessage} => ${message}`)
+        if(message === "") {
+            console.error(`${timestamp} [${LogLevels.ERROR}] [${context}]: ${resMessage}`);
+        } else {
+            console.error(`${timestamp} [${LogLevels.ERROR}] [${context}]: ${resMessage} => ${message}`);
+        }
         return res.status(statusCode).send({
             success: false,
             message,

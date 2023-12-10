@@ -8,12 +8,12 @@ import {ResponseCodes} from "../support/enums";
 import {ResponseMessages} from "../support/objects/responseMessages";
 
 export class ConnectorController {
-    private connectorRepo = AppDataSource.getRepository(Connector);
 
     async getConnectors(req: Request, res: Response): Promise<Response> {
         const alias = "connector";
         const logContext = "connector-controller.ts -> getConnectors()";
-        const queryBuilder = this.connectorRepo.createQueryBuilder(alias);
+        const connectorRepo = AppDataSource.getRepository(Connector);
+        const queryBuilder = connectorRepo.createQueryBuilder(alias);
 
         try {
             const connectors = await QueryCreator.createQuery(req, queryBuilder, alias);
@@ -26,10 +26,11 @@ export class ConnectorController {
     async getConnector(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
         const logContext = "connector-controller.ts -> getConnector()";
+        const connectorRepo = AppDataSource.getRepository(Connector);
         let connector: Connector;
 
         try {
-            connector = await this.connectorRepo.findOneByOrFail({ id: id });
+            connector = await connectorRepo.findOneByOrFail({ id: id });
             return ResponseUtils.sendResponse(res, "", ResponseCodes.SUCCESS, ResponseMessages[ResponseCodes.SUCCESS], logContext, connector);
         } catch (error) {
             return ResponseUtils.sendError(res, "Can't get connector with specified id", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext);
@@ -39,6 +40,7 @@ export class ConnectorController {
     async createConnector(req: Request, res: Response): Promise<Response> {
         const connectorBody: Connector = req.body;
         const logContext = "connector-controller.ts -> createConnector()";
+        const connectorRepo = AppDataSource.getRepository(Connector);
         const validateErrors = await validate(connectorBody);
 
         if(validateErrors.length>0) {
@@ -46,8 +48,8 @@ export class ConnectorController {
         }
 
         try{
-            const newConnector = this.connectorRepo.create(connectorBody);
-            await this.connectorRepo.save(newConnector);
+            const newConnector = connectorRepo.create(connectorBody);
+            await connectorRepo.save(newConnector);
             return ResponseUtils.sendResponse(res, "", ResponseCodes.CREATED, ResponseMessages[ResponseCodes.CREATED], logContext, newConnector);
         } catch (error) {
             return ResponseUtils.sendError(res, "Can't create connector with specified id", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext);
@@ -57,16 +59,17 @@ export class ConnectorController {
     async updateConnector(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
         const logContext = "connector-controller.ts -> updateConnector()";
+        const connectorRepo = AppDataSource.getRepository(Connector);
         const connectorBody = req.body;
         let existingConnector;
         try {
             try {
-                existingConnector = await this.connectorRepo.findOneByOrFail({ id: id });
+                existingConnector = await connectorRepo.findOneByOrFail({ id: id });
             } catch (error) {
                 return ResponseUtils.sendError(res, "Can't find connector with specified id",ResponseCodes.NOT_FOUND, ResponseMessages[ResponseCodes.NOT_FOUND], logContext);
             }
-            this.connectorRepo.merge(existingConnector, connectorBody);
-            await this.connectorRepo.save(existingConnector);
+            connectorRepo.merge(existingConnector, connectorBody);
+            await connectorRepo.save(existingConnector);
             return ResponseUtils.sendResponse(res, "Connector updated successfully", ResponseCodes.SUCCESS, ResponseMessages[ResponseCodes.SUCCESS], logContext, existingConnector);
         } catch (error) {
             return ResponseUtils.sendError(res, "Can't update connector with specified id", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext);
@@ -77,17 +80,18 @@ export class ConnectorController {
     async deleteConnector(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
         const logContext = "connector-controller.ts -> deleteConnector()";
+        const connectorRepo = AppDataSource.getRepository(Connector);
         let connectorToRemove;
 
         try {
 
             try {
-                connectorToRemove = await this.connectorRepo.findOneByOrFail({ id: id });
+                connectorToRemove = await connectorRepo.findOneByOrFail({ id: id });
             } catch (error) {
                 return ResponseUtils.sendError(res, "Can't find connector with specified id",ResponseCodes.NOT_FOUND, ResponseMessages[ResponseCodes.NOT_FOUND], logContext);
             }
 
-            await this.connectorRepo.remove(connectorToRemove);
+            await connectorRepo.remove(connectorToRemove);
             return ResponseUtils.sendResponse(res, "Connector deleted successfully", ResponseCodes.SUCCESS, ResponseMessages[ResponseCodes.SUCCESS], logContext, connectorToRemove);
         } catch (error) {
             return ResponseUtils.sendError(res, "Can't delete connector with specified id", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext);
