@@ -31,8 +31,9 @@ export class AuthController {
                 return ResponseUtils.sendError(res, "Incorrect password", ResponseCodes.UNAUTHORIZED, ResponseMessages[ResponseCodes.UNAUTHORIZED], logContext);
             }
 
+            const timestamp = Date.now();
             const token = jwt.sign(
-                { id: user.id, name: user.name },
+                { id: user.id, name: user.name, random: timestamp },
                 config.jwtSecret,
                 { expiresIn: "120s" }
             );

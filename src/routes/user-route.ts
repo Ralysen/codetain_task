@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', [TokenHandler], userController.getAllUsers);
 router.get('/:id', [TokenHandler], userController.getUserById);
-router.post('/', [TokenHandler], userController.createNewUser);
+router.post('/', userController.createNewUser);
 router.put('/:id', [TokenHandler], userController.updateUser);
 router.delete('/:id', [TokenHandler], userController.deleteUser);
 
