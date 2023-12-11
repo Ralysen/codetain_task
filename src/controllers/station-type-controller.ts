@@ -1,51 +1,96 @@
 import { Request, Response } from "express";
 import { ResponseUtils } from "../middleware";
-import StationTypeService from "../services/station-type-service";
+import { AppDataSource } from "../database/data-source";
+import { StationType } from "../entity";
+import QueryCreator from "../middleware/query-creator";
+import { validate } from "class-validator";
+import { ResponseCodes } from "../support/enums";
+import { ResponseMessages } from "../support/objects/responseMessages";
 
 export class StationTypeController {
+
+
     async getStationTypes(req: Request, res: Response): Promise<Response> {
-        const stationTypes = await StationTypeService.getAllStationTypes(req);
-        return ResponseUtils.sendResponse(res, stationTypes, 200);
+        const alias = "station_type";
+        const logContext = "station-type-controller.ts -> getStationTypes()";
+        const stationTypeRepo = AppDataSource.getRepository(StationType);
+        const queryBuilder = stationTypeRepo.createQueryBuilder(alias);
+
+        try {
+            const stationTypes = await QueryCreator.createQuery(req, queryBuilder, alias)
+            return ResponseUtils.sendResponse(res, "", ResponseCodes.SUCCESS, ResponseMessages[ResponseCodes.SUCCESS], logContext, stationTypes);
+        } catch (error) {
+            return ResponseUtils.sendError(res, "Can't get station types list", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext);
+        }
     }
 
     async getStationType(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
-        const stationType = await StationTypeService.getStationTypeById(id);
+        const logContext = "station-type-controller.ts -> getStationType()";
+        const stationTypeRepo = AppDataSource.getRepository(StationType);
+        let stationType;
 
-        if(!stationType){
-            return ResponseUtils.sendError(res, "Station type not found", 404);
+        try {
+            stationType = await stationTypeRepo.findOneByOrFail({ id: id });
+            return ResponseUtils.sendResponse(res, "", ResponseCodes.SUCCESS, ResponseMessages[ResponseCodes.SUCCESS], logContext, stationType);
+        } catch (error) {
+            return ResponseUtils.sendError(res, "Can't find station type with specified id", ResponseCodes.NOT_FOUND, ResponseMessages[ResponseCodes.NOT_FOUND], logContext);
+
         }
-
-        return ResponseUtils.sendResponse(res, stationType, 200);
     }
 
     async createStationType(req: Request, res: Response): Promise<Response> {
-        const stationTypeBody = req.body;
-        const stationType = await StationTypeService.createStationType(stationTypeBody);
-        return ResponseUtils.sendResponse(res, stationType, 200);
+        const stationTypeBody: StationType = req.body;
+        const logContext = "station-type-controller.ts -> createStationType()";
+        const stationTypeRepo = AppDataSource.getRepository(StationType);
+        const validateErrors = await validate(stationTypeBody);
+
+        if(validateErrors.length>0) {
+            return ResponseUtils.sendError(res, "", ResponseCodes.BAD_REQUEST, ResponseMessages[ResponseCodes.BAD_REQUEST], logContext);
+        }
+
+        try {
+            const newStationType = stationTypeRepo.create(stationTypeBody);
+            await stationTypeRepo.save(newStationType);
+            return ResponseUtils.sendResponse(res, "Station Type created successfully", ResponseCodes.CREATED, ResponseMessages[ResponseCodes.CREATED], logContext, newStationType);
+        } catch (error) {
+            return ResponseUtils.sendError(res, "Can't create specified station type", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext, error);
+        }
+
     }
 
     async updateStationType(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
+        const logContext = "station-type-controller.ts -> updateStationType()";
+        const stationTypeRepo = AppDataSource.getRepository(StationType);
         const stationTypeBody = req.body;
-        const stationType = await StationTypeService.updateStationType(id, stationTypeBody);
 
-        if(!stationType){
-            return ResponseUtils.sendError(res, "Station type not found", 404);
+        try {
+            const existingStationType = await stationTypeRepo.findOneByOrFail({ id: id });
+            stationTypeRepo.merge(existingStationType, stationTypeBody);
+            await stationTypeRepo.save(existingStationType);
+            return ResponseUtils.sendResponse(res, "Station Type updated successfully", ResponseCodes.SUCCESS, ResponseMessages[ResponseCodes.SUCCESS], logContext, existingStationType);
+
+        } catch (error) {
+            return ResponseUtils.sendError(res, "Can't create specified station type", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext, error);
         }
-
-        return ResponseUtils.sendResponse(res, stationType, 200);
     }
 
     async deleteStationType(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
-
-        const stationTypeToRemove = await StationTypeService.deleteStation(id);
-
-        if(!stationTypeToRemove) {
-            return ResponseUtils.sendError(res, "Station type not found", 404);
+        const logContext = "station-type-controller.ts -> deleteStationType()";
+        const stationTypeRepo = AppDataSource.getRepository(StationType);
+        let stationTypeToRemove;
+        try {
+            try {
+                stationTypeToRemove = await stationTypeRepo.findOneByOrFail({ id: id });
+            } catch (error) {
+                return ResponseUtils.sendError(res, "Can't find station type with specified id", ResponseCodes.NOT_FOUND, ResponseMessages[ResponseCodes.NOT_FOUND], logContext);
+            }
+            await stationTypeRepo.remove(stationTypeToRemove);
+            return ResponseUtils.sendResponse(res, "Station Type removed successfully", ResponseCodes.SUCCESS, ResponseMessages[ResponseCodes.SUCCESS], logContext);
+        } catch (error) {
+            return ResponseUtils.sendError(res, "Can't create specified station type", ResponseCodes.INTERNAL_SERVER_ERROR, ResponseMessages[ResponseCodes.INTERNAL_SERVER_ERROR], logContext, error);
         }
-
-        return ResponseUtils.sendResponse(res, stationTypeToRemove, 200);
     }
 }

@@ -1,0 +1,675 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"21df1290-0dfb-4b33-a5df-76ad0dd866fc\" name=\"Changes\" comment=\"improving code readability\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/middleware/pagination.ts\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/dist/database/data-source.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/dist/database/data-source.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/dist/entity/connector.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/dist/entity/connector.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/dist/entity/index.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/dist/entity/index.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/dist/enums/index.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/dist/enums/index.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/dist/index.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/dist/index.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/controllers/charging-station-controller.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/controllers/charging-station-controller.ts\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/controllers/connector-controller.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/controllers/connector-controller.ts\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/controllers/station-type-controller.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/controllers/station-type-controller.ts\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/services/charging-station-service.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/services/charging-station-service.ts\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/services/connector-service.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/services/connector-service.ts\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/services/station-type-service.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/services/station-type-service.ts\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Dockerfile\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"charger-development\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Ralysen&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"852dbbcb-505c-40a1-9da4-86e0130ba214\" />\r\n        <option name=\"url\" value=\"https://github.com/Ralysen/codetain_task.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2YtTvzkD8YaEbHC3HtXbxqeqPgY\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"charger-development-pagination\",\r\n    \"javascript.nodejs.core.library.configured.version\": \"20.9.0\",\r\n    \"javascript.nodejs.core.library.typings.version\": \"20.9.0\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_interpreter_path\": \"node\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"ts.external.directory.path\": \"D:\\\\Repos\\\\charger\\\\node_modules\\\\typescript\\\\lib\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\Repos\\charger\\app\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"start\" type=\"js.build_tools.npm\" nameIsGenerated=\"true\">\r\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\r\n      <command value=\"run\" />\r\n      <scripts>\r\n        <script value=\"start\" />\r\n      </scripts>\r\n      <node-interpreter value=\"project\" />\r\n      <envs />\r\n      <method v=\"2\">\r\n        <option name=\"NpmBeforeRunTask\" enabled=\"true\">\r\n          <package-json value=\"$PROJECT_DIR$/package.json\" />\r\n          <command value=\"run\" />\r\n          <scripts>\r\n            <script value=\"build\" />\r\n          </scripts>\r\n          <node-interpreter value=\"project\" />\r\n          <envs />\r\n        </option>\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"21df1290-0dfb-4b33-a5df-76ad0dd866fc\" name=\"Changes\" comment=\"\" />\r\n      <created>1701344110941</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1701344110941</updated>\r\n      <workItem from=\"1701344112017\" duration=\"3470000\" />\r\n      <workItem from=\"1701351655998\" duration=\"13996000\" />\r\n      <workItem from=\"1701427619917\" duration=\"595000\" />\r\n      <workItem from=\"1701429250049\" duration=\"2843000\" />\r\n      <workItem from=\"1701434297278\" duration=\"23686000\" />\r\n      <workItem from=\"1701512211819\" duration=\"14998000\" />\r\n      <workItem from=\"1701607097627\" duration=\"11302000\" />\r\n      <workItem from=\"1701638633621\" duration=\"100000\" />\r\n      <workItem from=\"1701675353843\" duration=\"4484000\" />\r\n      <workItem from=\"1701714483268\" duration=\"2509000\" />\r\n      <workItem from=\"1701775965084\" duration=\"14150000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Base project configuration\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701437144948</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701437144948</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Create ORM Models\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701437510827</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701437510827</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Sequalize to TypeORM change\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701477923544</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701477923544</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Sequalize to TypeORM change - clear code fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701478009500</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701478009500</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Express base data handling - create routes and controllers\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701633626657</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701633626657</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Express base data handling - add error handler\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701638673837</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701638673837</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"improving code readability\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701780538303</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701780538303</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnknownFeatures\">\r\n    <option featureType=\"dependencySupport\" implementationName=\"executable:docker\" />\r\n    <option featureType=\"dependencySupport\" implementationName=\"javascript:npm:pug\" />\r\n    <option featureType=\"dependencySupport\" implementationName=\"executable:kubectl\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Base project configuration\" />\r\n    <MESSAGE value=\"Create ORM Models\" />\r\n    <MESSAGE value=\"Sequalize to TypeORM change\" />\r\n    <MESSAGE value=\"Sequalize to TypeORM change - clear code fix\" />\r\n    <MESSAGE value=\"Express base data handling - create routes and controllers\" />\r\n    <MESSAGE value=\"Express base data handling - add error handler\" />\r\n    <MESSAGE value=\"improving code readability\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"improving code readability\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/.idea/workspace.xml	(date 1701824913803)
+@@ -4,17 +4,18 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="improving code readability">
+-      <change afterPath="$PROJECT_DIR$/src/middleware/pagination.ts" afterDir="false" />
++    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Add pagination for every getAll endpoints">
++      <change afterPath="$PROJECT_DIR$/src/middleware/filters.ts" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/support/interfaces/index.ts" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/support/interfaces/pagination-response.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_12_2023_19_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_12_2023_19_31__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/dist/database/data-source.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/database/data-source.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/dist/entity/connector.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entity/connector.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/dist/entity/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entity/index.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/dist/enums/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/enums/index.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/controllers/connector-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/connector-controller.ts" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/entity/station-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/station-type.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/middleware/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/index.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/middleware/pagination.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/pagination.ts" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/services/charging-station-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/charging-station-service.ts" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/services/connector-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/connector-service.ts" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/services/station-type-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/station-type-service.ts" afterDir="false" />
+@@ -72,7 +73,7 @@
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "charger-development-pagination",
++    "git-widget-placeholder": "charger-development-filter",
+     "javascript.nodejs.core.library.configured.version": "20.9.0",
+     "javascript.nodejs.core.library.typings.version": "20.9.0",
+     "node.js.detected.package.eslint": "true",
+@@ -188,7 +189,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1701780538303</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="Add pagination for every getAll endpoints">
++      <option name="closed" value="true" />
++      <created>1701817715441</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1701817715441</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -207,6 +216,7 @@
+     <MESSAGE value="Express base data handling - create routes and controllers" />
+     <MESSAGE value="Express base data handling - add error handler" />
+     <MESSAGE value="improving code readability" />
+-    <option name="LAST_COMMIT_MESSAGE" value="improving code readability" />
++    <MESSAGE value="Add pagination for every getAll endpoints" />
++    <option name="LAST_COMMIT_MESSAGE" value="Add pagination for every getAll endpoints" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/middleware/filters.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/middleware/filters.ts b/src/middleware/filters.ts
+new file mode 100644
+--- /dev/null	(date 1701864726710)
++++ b/src/middleware/filters.ts	(date 1701864726710)
+@@ -0,0 +1,48 @@
++import {Request} from "express";
++import {Repository, SelectQueryBuilder} from "typeorm";
++import {Connector} from "../entity";
++
++export class Filters {
++    async filterByQueryParameter<T> (
++        req: Request,
++        dataRepo: Repository<any>,
++        alias: string = "entity"
++    ): Promise<SelectQueryBuilder<any>> {
++        const queryBuilder = dataRepo.createQueryBuilder(alias);
++
++        if(alias === "charging_station") {
++            if(req.query.firmware_version) {
++                queryBuilder.andWhere(`${alias}.firmware_version = :firmware_version`, { firmware_version: req.query.firmware_version });
++            }
++        }
++
++        if(alias === "connector") {
++
++        }
++
++        if(alias === "stationType") {
++
++        }
++        return queryBuilder;
++    }
++}
++export default new Filters();
++/*
++import {Repository} from "typeorm";
++import {query, Request, Response} from "express";
++import {ChargingStation, Connector, StationType} from "../entity";
++
++export class Filters {
++    async filterByQueryParameter<T>(
++        req: Request,
++        dataRepo: Repository<any>
++    ): Promise<{result: T}> {
++        const { filterParam } = req.query;
++        if(dataRepo instanceof ChargingStation){
++        }
++        const result = dataRepo
++            .createQueryBuilder('query')
++            .andWhere('query.')
++    }
++}
++export default new Filters();*/
+Index: src/support/interfaces/index.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/support/interfaces/index.ts b/src/support/interfaces/index.ts
+new file mode 100644
+--- /dev/null	(date 1701820838175)
++++ b/src/support/interfaces/index.ts	(date 1701820838175)
+@@ -0,0 +1,1 @@
++export * from './pagination-response';
+\ No newline at end of file
+Index: src/support/interfaces/pagination-response.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/support/interfaces/pagination-response.ts b/src/support/interfaces/pagination-response.ts
+new file mode 100644
+--- /dev/null	(date 1701820838136)
++++ b/src/support/interfaces/pagination-response.ts	(date 1701820838136)
+@@ -0,0 +1,6 @@
++export interface PaginationResponse <T> {
++    result: T[],
++    total_count: number,
++    last_page: number,
++    actual_page: number
++}
+\ No newline at end of file
+Index: src/middleware/pagination.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { Repository } from \"typeorm\";\r\nimport { Request } from \"express\";\r\n\r\nexport class Pagination {\r\n    static handleQuery(\r\n        req: Request\r\n    ):{page: number|undefined,limit: number|undefined}{\r\n        let page: undefined | number;\r\n        let limit: undefined | number;\r\n        const { query } = req;\r\n\r\n        if(query.page != undefined){\r\n            page = parseInt(query.page as string);\r\n        }\r\n\r\n        if(query.limit != undefined){\r\n            limit = parseInt(query.limit as string);\r\n        }\r\n\r\n        return {page, limit}\r\n    }\r\n\r\n    async paginate<T>(\r\n        dataRepo: Repository<any>,\r\n        page: number,\r\n        limit: number\r\n    ): Promise<{\r\n        result: T[];\r\n        total_count: number;\r\n        last_page: number\r\n        actual_page: number;\r\n    }>\r\n    {\r\n        const startIndex = (page - 1) * limit;\r\n        const [result, total_count] = await dataRepo\r\n            .createQueryBuilder('charging_station')\r\n            .skip(startIndex)\r\n            .take(limit)\r\n            .getManyAndCount();\r\n        const last_page = Math.ceil(total_count/limit);\r\n        const actual_page = page;\r\n        return { result, total_count, last_page, actual_page  };\r\n    }\r\n}\r\nexport default new Pagination();
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/middleware/pagination.ts b/src/middleware/pagination.ts
+--- a/src/middleware/pagination.ts	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/src/middleware/pagination.ts	(date 1701865426332)
+@@ -1,5 +1,6 @@
+-import { Repository } from "typeorm";
++import {Repository, SelectQueryBuilder} from "typeorm";
+ import { Request } from "express";
++import { PaginationResponse } from "../support/interfaces";
+ 
+ export class Pagination {
+     static handleQuery(
+@@ -9,11 +10,11 @@
+         let limit: undefined | number;
+         const { query } = req;
+ 
+-        if(query.page != undefined){
++        if(query.page !== undefined){
+             page = parseInt(query.page as string);
+         }
+ 
+-        if(query.limit != undefined){
++        if(query.limit !== undefined){
+             limit = parseInt(query.limit as string);
+         }
+ 
+@@ -23,17 +24,15 @@
+     async paginate<T>(
+         dataRepo: Repository<any>,
+         page: number,
+-        limit: number
+-    ): Promise<{
+-        result: T[];
+-        total_count: number;
+-        last_page: number
+-        actual_page: number;
+-    }>
++        limit: number,
++        queryBuilder: SelectQueryBuilder<any>
++    ): Promise<PaginationResponse<T>>
+     {
+         const startIndex = (page - 1) * limit;
++        const test3 = queryBuilder.getMany();
+         const [result, total_count] = await dataRepo
+-            .createQueryBuilder('charging_station')
++            .createQueryBuilder("charging_station")
++            .andWhere(queryBuilder.getQuery)
+             .skip(startIndex)
+             .take(limit)
+             .getManyAndCount();
+Index: dist/entity/station-type.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use strict\";\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nvar __metadata = (this && this.__metadata) || function (k, v) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(k, v);\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.StationType = void 0;\r\nconst typeorm_1 = require(\"typeorm\");\r\nconst enums_1 = require(\"../enums\");\r\nconst charging_station_1 = require(\"./charging-station\");\r\nlet StationType = class StationType {\r\n};\r\nexports.StationType = StationType;\r\n__decorate([\r\n    (0, typeorm_1.PrimaryGeneratedColumn)(\"uuid\"),\r\n    __metadata(\"design:type\", String)\r\n], StationType.prototype, \"id\", void 0);\r\n__decorate([\r\n    (0, typeorm_1.Column)(),\r\n    __metadata(\"design:type\", String)\r\n], StationType.prototype, \"name\", void 0);\r\n__decorate([\r\n    (0, typeorm_1.Column)(\"integer\"),\r\n    __metadata(\"design:type\", Number)\r\n], StationType.prototype, \"plug_count\", void 0);\r\n__decorate([\r\n    (0, typeorm_1.Column)(\"float\"),\r\n    __metadata(\"design:type\", Number)\r\n], StationType.prototype, \"efficiency\", void 0);\r\n__decorate([\r\n    (0, typeorm_1.Column)(),\r\n    __metadata(\"design:type\", String)\r\n], StationType.prototype, \"current_type\", void 0);\r\n__decorate([\r\n    (0, typeorm_1.OneToMany)(() => charging_station_1.ChargingStation, (chargingStation) => chargingStation.station_type),\r\n    __metadata(\"design:type\", Array)\r\n], StationType.prototype, \"charging_stations\", void 0);\r\nexports.StationType = StationType = __decorate([\r\n    (0, typeorm_1.Entity)()\r\n], StationType);\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dist/entity/station-type.js b/dist/entity/station-type.js
+--- a/dist/entity/station-type.js	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/dist/entity/station-type.js	(date 1701865700797)
+@@ -11,7 +11,6 @@
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.StationType = void 0;
+ const typeorm_1 = require("typeorm");
+-const enums_1 = require("../enums");
+ const charging_station_1 = require("./charging-station");
+ let StationType = class StationType {
+ };
+Index: dist/middleware/pagination.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.Pagination = void 0;\r\nclass Pagination {\r\n    static handleQuery(req) {\r\n        let page;\r\n        let limit;\r\n        const { query } = req;\r\n        if (query.page != undefined) {\r\n            page = parseInt(query.page);\r\n        }\r\n        if (query.limit != undefined) {\r\n            limit = parseInt(query.limit);\r\n        }\r\n        return { page, limit };\r\n    }\r\n    async paginate(dataRepo, page, pageSize) {\r\n        const startIndex = (page - 1) * pageSize;\r\n        const next_page = page + 1;\r\n        let previous_page;\r\n        const [data, total_count] = await dataRepo\r\n            .createQueryBuilder('charging_station')\r\n            .skip(startIndex)\r\n            .take(pageSize)\r\n            .getManyAndCount();\r\n        const last_page = Math.ceil(total_count / pageSize);\r\n        if (page > 1) {\r\n            previous_page = page - 1;\r\n        }\r\n        else {\r\n            previous_page = undefined;\r\n        }\r\n        return { data, total_count, next_page, previous_page, last_page };\r\n    }\r\n}\r\nexports.Pagination = Pagination;\r\nexports.default = new Pagination();\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dist/middleware/pagination.js b/dist/middleware/pagination.js
+--- a/dist/middleware/pagination.js	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/dist/middleware/pagination.js	(date 1701865700837)
+@@ -6,31 +6,26 @@
+         let page;
+         let limit;
+         const { query } = req;
+-        if (query.page != undefined) {
++        if (query.page !== undefined) {
+             page = parseInt(query.page);
+         }
+-        if (query.limit != undefined) {
++        if (query.limit !== undefined) {
+             limit = parseInt(query.limit);
+         }
+         return { page, limit };
+     }
+-    async paginate(dataRepo, page, pageSize) {
+-        const startIndex = (page - 1) * pageSize;
+-        const next_page = page + 1;
+-        let previous_page;
+-        const [data, total_count] = await dataRepo
+-            .createQueryBuilder('charging_station')
++    async paginate(dataRepo, page, limit, queryBuilder) {
++        const startIndex = (page - 1) * limit;
++        const test3 = queryBuilder.getMany();
++        const [result, total_count] = await dataRepo
++            .createQueryBuilder("charging_station")
++            .andWhere(queryBuilder.getQuery)
+             .skip(startIndex)
+-            .take(pageSize)
++            .take(limit)
+             .getManyAndCount();
+-        const last_page = Math.ceil(total_count / pageSize);
+-        if (page > 1) {
+-            previous_page = page - 1;
+-        }
+-        else {
+-            previous_page = undefined;
+-        }
+-        return { data, total_count, next_page, previous_page, last_page };
++        const last_page = Math.ceil(total_count / limit);
++        const actual_page = page;
++        return { result, total_count, last_page, actual_page };
+     }
+ }
+ exports.Pagination = Pagination;
+Index: dist/middleware/index.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use strict\";\r\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\r\n    if (k2 === undefined) k2 = k;\r\n    var desc = Object.getOwnPropertyDescriptor(m, k);\r\n    if (!desc || (\"get\" in desc ? !m.__esModule : desc.writable || desc.configurable)) {\r\n      desc = { enumerable: true, get: function() { return m[k]; } };\r\n    }\r\n    Object.defineProperty(o, k2, desc);\r\n}) : (function(o, m, k, k2) {\r\n    if (k2 === undefined) k2 = k;\r\n    o[k2] = m[k];\r\n}));\r\nvar __exportStar = (this && this.__exportStar) || function(m, exports) {\r\n    for (var p in m) if (p !== \"default\" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n__exportStar(require(\"./error-handler\"), exports);\r\n__exportStar(require(\"./response-utils\"), exports);\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dist/middleware/index.js b/dist/middleware/index.js
+--- a/dist/middleware/index.js	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/dist/middleware/index.js	(date 1701865700837)
+@@ -16,3 +16,4 @@
+ Object.defineProperty(exports, "__esModule", { value: true });
+ __exportStar(require("./error-handler"), exports);
+ __exportStar(require("./response-utils"), exports);
++__exportStar(require("./pagination"), exports);
+Index: dist/services/station-type-service.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.StationTypeService = void 0;\r\nconst entity_1 = require(\"../entity\");\r\nconst data_source_1 = require(\"../database/data-source\");\r\nclass StationTypeService {\r\n    async getAllStationTypes() {\r\n        const stationTypeRepo = data_source_1.AppDataSource.getRepository(entity_1.StationType);\r\n        return await stationTypeRepo.find();\r\n    }\r\n    async getStationTypeById(id) {\r\n        const stationTypeRepo = data_source_1.AppDataSource.getRepository(entity_1.StationType);\r\n        return await stationTypeRepo.findOneBy({\r\n            id: id,\r\n        });\r\n    }\r\n    async createStationType(stationTypeData) {\r\n        const stationTypeRepo = data_source_1.AppDataSource.getRepository(entity_1.StationType);\r\n        const newStationType = stationTypeRepo.create(stationTypeData);\r\n        return await stationTypeRepo.save(newStationType);\r\n    }\r\n    async updateStationType(id, StationTypeNewData) {\r\n        const stationTypeRepo = data_source_1.AppDataSource.getRepository(entity_1.StationType);\r\n        const existingStationType = await stationTypeRepo.findOneBy({\r\n            id: id,\r\n        });\r\n        if (!existingStationType) {\r\n            return null;\r\n        }\r\n        stationTypeRepo.merge(existingStationType, StationTypeNewData);\r\n        return await stationTypeRepo.save(existingStationType);\r\n    }\r\n    async deleteStation(id) {\r\n        const stationTypeRepo = data_source_1.AppDataSource.getRepository(entity_1.StationType);\r\n        const stationTypeToRemove = await stationTypeRepo.findOneBy({\r\n            id: id,\r\n        });\r\n        if (!stationTypeToRemove) {\r\n            return false;\r\n        }\r\n        await stationTypeRepo.remove(stationTypeToRemove);\r\n        return true;\r\n    }\r\n}\r\nexports.StationTypeService = StationTypeService;\r\nexports.default = new StationTypeService();\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dist/services/station-type-service.js b/dist/services/station-type-service.js
+--- a/dist/services/station-type-service.js	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/dist/services/station-type-service.js	(date 1701865700877)
+@@ -1,12 +1,18 @@
+ "use strict";
++var __importDefault = (this && this.__importDefault) || function (mod) {
++    return (mod && mod.__esModule) ? mod : { "default": mod };
++};
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.StationTypeService = void 0;
+ const entity_1 = require("../entity");
+ const data_source_1 = require("../database/data-source");
++const pagination_1 = __importDefault(require("../middleware/pagination"));
++const filters_1 = __importDefault(require("../middleware/filters"));
+ class StationTypeService {
+-    async getAllStationTypes() {
++    async getAllStationTypes(req, page = 1, pageSize = 5) {
+         const stationTypeRepo = data_source_1.AppDataSource.getRepository(entity_1.StationType);
+-        return await stationTypeRepo.find();
++        const stationTypeFiltered = filters_1.default.filterByQueryParameter(req, stationTypeRepo, "station_type");
++        return pagination_1.default.paginate(stationTypeRepo, page, pageSize, await stationTypeFiltered);
+     }
+     async getStationTypeById(id) {
+         const stationTypeRepo = data_source_1.AppDataSource.getRepository(entity_1.StationType);
+Index: dist/services/connector-service.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.ConnectorService = void 0;\r\nconst entity_1 = require(\"../entity\");\r\nconst data_source_1 = require(\"../database/data-source\");\r\nclass ConnectorService {\r\n    async getAllConnectors() {\r\n        const connectorRepo = data_source_1.AppDataSource.getRepository(entity_1.Connector);\r\n        return await connectorRepo.find();\r\n    }\r\n    async getConnectorById(id) {\r\n        const connectorRepo = data_source_1.AppDataSource.getRepository(entity_1.Connector);\r\n        return await connectorRepo.findOneBy({\r\n            id: id,\r\n        });\r\n    }\r\n    async createConnector(connectorData) {\r\n        const connectorRepo = data_source_1.AppDataSource.getRepository(entity_1.Connector);\r\n        const newConnector = connectorRepo.create(connectorData);\r\n        return await connectorRepo.save(newConnector);\r\n    }\r\n    async updateConnector(id, connectorNewData) {\r\n        const connectorRepo = data_source_1.AppDataSource.getRepository(entity_1.Connector);\r\n        const existingConnector = await connectorRepo.findOneBy({\r\n            id: id,\r\n        });\r\n        if (!existingConnector) {\r\n            return null;\r\n        }\r\n        connectorRepo.merge(existingConnector, connectorNewData);\r\n        return await connectorRepo.save(existingConnector);\r\n    }\r\n    async deleteStation(id) {\r\n        const connectorRepo = data_source_1.AppDataSource.getRepository(entity_1.Connector);\r\n        const connectorToRemove = await connectorRepo.findOneBy({\r\n            id: id,\r\n        });\r\n        if (!connectorToRemove) {\r\n            return false;\r\n        }\r\n        await connectorRepo.remove(connectorToRemove);\r\n        return true;\r\n    }\r\n}\r\nexports.ConnectorService = ConnectorService;\r\nexports.default = new ConnectorService();\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dist/services/connector-service.js b/dist/services/connector-service.js
+--- a/dist/services/connector-service.js	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/dist/services/connector-service.js	(date 1701865700867)
+@@ -1,12 +1,18 @@
+ "use strict";
++var __importDefault = (this && this.__importDefault) || function (mod) {
++    return (mod && mod.__esModule) ? mod : { "default": mod };
++};
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.ConnectorService = void 0;
+ const entity_1 = require("../entity");
+ const data_source_1 = require("../database/data-source");
++const pagination_1 = __importDefault(require("../middleware/pagination"));
++const filters_1 = __importDefault(require("../middleware/filters"));
+ class ConnectorService {
+-    async getAllConnectors() {
++    async getAllConnectors(req, page = 1, pageSize = 5) {
+         const connectorRepo = data_source_1.AppDataSource.getRepository(entity_1.Connector);
+-        return await connectorRepo.find();
++        const connectorFiltered = filters_1.default.filterByQueryParameter(req, connectorRepo, "connector");
++        return pagination_1.default.paginate(connectorRepo, page, pageSize, await connectorFiltered);
+     }
+     async getConnectorById(id) {
+         const connectorRepo = data_source_1.AppDataSource.getRepository(entity_1.Connector);
+Index: dist/services/charging-station-service.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use strict\";\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.ChargingStationService = void 0;\r\nconst entity_1 = require(\"../entity\");\r\nconst data_source_1 = require(\"../database/data-source\");\r\nconst pagination_1 = __importDefault(require(\"../middleware/pagination\"));\r\nclass ChargingStationService {\r\n    async getAllStations(page = 1, pageSize = 5) {\r\n        const chargingStationRepo = data_source_1.AppDataSource.getRepository(entity_1.ChargingStation);\r\n        return pagination_1.default.paginate(chargingStationRepo, page, pageSize);\r\n        //return await chargingStationRepo.find();\r\n    }\r\n    async getStationById(id) {\r\n        const chargingStationRepo = data_source_1.AppDataSource.getRepository(entity_1.ChargingStation);\r\n        return await chargingStationRepo.findOneBy({\r\n            id: id,\r\n        });\r\n    }\r\n    async createStation(stationData) {\r\n        const chargingStationRepo = data_source_1.AppDataSource.getRepository(entity_1.ChargingStation);\r\n        const newStation = chargingStationRepo.create(stationData);\r\n        return await chargingStationRepo.save(newStation);\r\n    }\r\n    async updateStation(id, stationNewData) {\r\n        const chargingStationRepo = data_source_1.AppDataSource.getRepository(entity_1.ChargingStation);\r\n        const existingStation = await chargingStationRepo.findOneBy({\r\n            id: id,\r\n        });\r\n        if (!existingStation) {\r\n            return null;\r\n        }\r\n        chargingStationRepo.merge(existingStation, stationNewData);\r\n        return await chargingStationRepo.save(existingStation);\r\n    }\r\n    async deleteStation(id) {\r\n        const chargingStationRepo = data_source_1.AppDataSource.getRepository(entity_1.ChargingStation);\r\n        const stationToRemove = await chargingStationRepo.findOneBy({\r\n            id: id,\r\n        });\r\n        if (!stationToRemove) {\r\n            return false;\r\n        }\r\n        await chargingStationRepo.remove(stationToRemove);\r\n        return true;\r\n    }\r\n}\r\nexports.ChargingStationService = ChargingStationService;\r\nexports.default = new ChargingStationService();\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dist/services/charging-station-service.js b/dist/services/charging-station-service.js
+--- a/dist/services/charging-station-service.js	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/dist/services/charging-station-service.js	(date 1701865700857)
+@@ -7,11 +7,12 @@
+ const entity_1 = require("../entity");
+ const data_source_1 = require("../database/data-source");
+ const pagination_1 = __importDefault(require("../middleware/pagination"));
++const filters_1 = __importDefault(require("../middleware/filters"));
+ class ChargingStationService {
+-    async getAllStations(page = 1, pageSize = 5) {
++    async getAllStations(req, page = 1, pageSize = 5) {
+         const chargingStationRepo = data_source_1.AppDataSource.getRepository(entity_1.ChargingStation);
+-        return pagination_1.default.paginate(chargingStationRepo, page, pageSize);
+-        //return await chargingStationRepo.find();
++        const chargingStationFiltered = filters_1.default.filterByQueryParameter(req, chargingStationRepo, "charging_station");
++        return pagination_1.default.paginate(chargingStationRepo, page, pageSize, await chargingStationFiltered);
+     }
+     async getStationById(id) {
+         const chargingStationRepo = data_source_1.AppDataSource.getRepository(entity_1.ChargingStation);
+Index: dist/controllers/connector-controller.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use strict\";\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.ConnectorController = void 0;\r\nconst middleware_1 = require(\"../middleware\");\r\nconst connector_service_1 = __importDefault(require(\"../services/connector-service\"));\r\nclass ConnectorController {\r\n    async getConnectors(req, res) {\r\n        const connectors = await connector_service_1.default.getAllConnectors();\r\n        return middleware_1.ResponseUtils.sendResponse(res, connectors, 200);\r\n    }\r\n    async getConnector(req, res) {\r\n        const { id } = req.params;\r\n        const connector = await connector_service_1.default.getConnectorById(id);\r\n        if (!connector) {\r\n            return middleware_1.ResponseUtils.sendError(res, \"Connector not found\", 404);\r\n        }\r\n        return middleware_1.ResponseUtils.sendResponse(res, connector, 200);\r\n    }\r\n    async createConnector(req, res) {\r\n        const connectorBody = req.body;\r\n        const newConnector = await connector_service_1.default.createConnector(connectorBody);\r\n        return middleware_1.ResponseUtils.sendResponse(res, newConnector, 200);\r\n    }\r\n    async updateConnector(req, res) {\r\n        const { id } = req.params;\r\n        const connectorBody = req.body;\r\n        const connector = await connector_service_1.default.updateConnector(id, connectorBody);\r\n        if (!connector) {\r\n            return middleware_1.ResponseUtils.sendError(res, \"Connector not found\", 404);\r\n        }\r\n        return middleware_1.ResponseUtils.sendResponse(res, connector, 200);\r\n    }\r\n    async deleteConnector(req, res) {\r\n        const { id } = req.params;\r\n        const connector = await connector_service_1.default.deleteStation(id);\r\n        if (!connector) {\r\n            return middleware_1.ResponseUtils.sendError(res, \"Connector not found\", 404);\r\n        }\r\n        return middleware_1.ResponseUtils.sendResponse(res, connector, 200);\r\n    }\r\n}\r\nexports.ConnectorController = ConnectorController;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dist/controllers/connector-controller.js b/dist/controllers/connector-controller.js
+--- a/dist/controllers/connector-controller.js	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/dist/controllers/connector-controller.js	(date 1701865700867)
+@@ -6,9 +6,11 @@
+ exports.ConnectorController = void 0;
+ const middleware_1 = require("../middleware");
+ const connector_service_1 = __importDefault(require("../services/connector-service"));
++const middleware_2 = require("../middleware");
+ class ConnectorController {
+     async getConnectors(req, res) {
+-        const connectors = await connector_service_1.default.getAllConnectors();
++        const paginationSett = middleware_2.Pagination.handleQuery(req);
++        const connectors = await connector_service_1.default.getAllConnectors(req, paginationSett.page, paginationSett.limit);
+         return middleware_1.ResponseUtils.sendResponse(res, connectors, 200);
+     }
+     async getConnector(req, res) {
+Index: src/controllers/station-type-controller.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { Request, Response } from \"express\";\r\nimport { ResponseUtils } from \"../middleware\";\r\nimport StationTypeService from \"../services/station-type-service\";\r\nimport { Pagination } from \"../middleware/pagination\";\r\n\r\nexport class StationTypeController {\r\n    async getStationTypes(req: Request, res: Response): Promise<Response> {\r\n        const paginationSett = Pagination.handleQuery(req);\r\n        const stationTypes = await StationTypeService.getAllStationTypes(\r\n            paginationSett.page,\r\n            paginationSett.limit\r\n        );\r\n        return ResponseUtils.sendResponse(res, stationTypes, 200);\r\n    }\r\n\r\n    async getStationType(req: Request, res: Response): Promise<Response> {\r\n        const { id } = req.params;\r\n        const stationType = await StationTypeService.getStationTypeById(id);\r\n\r\n        if(!stationType){\r\n            return ResponseUtils.sendError(res, \"Station type not found\", 404);\r\n        }\r\n\r\n        return ResponseUtils.sendResponse(res, stationType, 200);\r\n    }\r\n\r\n    async createStationType(req: Request, res: Response): Promise<Response> {\r\n        const stationTypeBody = req.body;\r\n        const stationType = await StationTypeService.createStationType(stationTypeBody);\r\n        return ResponseUtils.sendResponse(res, stationType, 200);\r\n    }\r\n\r\n    async updateStationType(req: Request, res: Response): Promise<Response> {\r\n        const { id } = req.params;\r\n        const stationTypeBody = req.body;\r\n        const stationType = await StationTypeService.updateStationType(id, stationTypeBody);\r\n\r\n        if(!stationType){\r\n            return ResponseUtils.sendError(res, \"Station type not found\", 404);\r\n        }\r\n\r\n        return ResponseUtils.sendResponse(res, stationType, 200);\r\n    }\r\n\r\n    async deleteStationType(req: Request, res: Response): Promise<Response> {\r\n        const { id } = req.params;\r\n\r\n        const stationTypeToRemove = await StationTypeService.deleteStation(id);\r\n\r\n        if(!stationTypeToRemove) {\r\n            return ResponseUtils.sendError(res, \"Station type not found\", 404);\r\n        }\r\n\r\n        return ResponseUtils.sendResponse(res, stationTypeToRemove, 200);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/controllers/station-type-controller.ts b/src/controllers/station-type-controller.ts
+--- a/src/controllers/station-type-controller.ts	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/src/controllers/station-type-controller.ts	(date 1701865310048)
+@@ -1,12 +1,13 @@
+ import { Request, Response } from "express";
+ import { ResponseUtils } from "../middleware";
+ import StationTypeService from "../services/station-type-service";
+-import { Pagination } from "../middleware/pagination";
++import { Pagination } from "../middleware";
+ 
+ export class StationTypeController {
+     async getStationTypes(req: Request, res: Response): Promise<Response> {
+         const paginationSett = Pagination.handleQuery(req);
+         const stationTypes = await StationTypeService.getAllStationTypes(
++            req,
+             paginationSett.page,
+             paginationSett.limit
+         );
+Index: dist/controllers/charging-station-controller.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use strict\";\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.ChargingStationController = void 0;\r\nconst middleware_1 = require(\"../middleware\");\r\nconst charging_station_service_1 = __importDefault(require(\"../services/charging-station-service\"));\r\nconst pagination_1 = require(\"../middleware/pagination\");\r\nclass ChargingStationController {\r\n    async getStations(req, res) {\r\n        const paginationSett = pagination_1.Pagination.handleQuery(req);\r\n        const stations = await charging_station_service_1.default\r\n            .getAllStations(paginationSett.page, paginationSett.limit);\r\n        return middleware_1.ResponseUtils.sendResponse(res, stations, 200);\r\n    }\r\n    async getStationById(req, res) {\r\n        const { id } = req.params;\r\n        const station = await charging_station_service_1.default.getStationById(id);\r\n        if (!station) {\r\n            return middleware_1.ResponseUtils.sendError(res, \"Station not found\", 404);\r\n        }\r\n        return middleware_1.ResponseUtils.sendResponse(res, station, 200);\r\n    }\r\n    async createStation(req, res) {\r\n        const stationBody = req.body;\r\n        const newStation = await charging_station_service_1.default.createStation(stationBody);\r\n        return middleware_1.ResponseUtils.sendResponse(res, newStation, 200);\r\n    }\r\n    async updateStation(req, res) {\r\n        const { id } = req.params;\r\n        const stationBody = req.body;\r\n        const updatedStation = await charging_station_service_1.default.updateStation(id, stationBody);\r\n        if (!updatedStation) {\r\n            return middleware_1.ResponseUtils.sendError(res, \"Station not found\", 404);\r\n        }\r\n        return middleware_1.ResponseUtils.sendResponse(res, updatedStation, 200);\r\n    }\r\n    async deleteStation(req, res) {\r\n        const { id } = req.params;\r\n        const stationToDelete = await charging_station_service_1.default.deleteStation(id);\r\n        if (!stationToDelete) {\r\n            return middleware_1.ResponseUtils.sendError(res, \"Station not found\", 404);\r\n        }\r\n        return middleware_1.ResponseUtils.sendResponse(res, { message: \"Station remove successfully\" }, 200);\r\n    }\r\n}\r\nexports.ChargingStationController = ChargingStationController;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dist/controllers/charging-station-controller.js b/dist/controllers/charging-station-controller.js
+--- a/dist/controllers/charging-station-controller.js	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/dist/controllers/charging-station-controller.js	(date 1701865700857)
+@@ -6,12 +6,12 @@
+ exports.ChargingStationController = void 0;
+ const middleware_1 = require("../middleware");
+ const charging_station_service_1 = __importDefault(require("../services/charging-station-service"));
+-const pagination_1 = require("../middleware/pagination");
++const middleware_2 = require("../middleware");
+ class ChargingStationController {
+     async getStations(req, res) {
+-        const paginationSett = pagination_1.Pagination.handleQuery(req);
++        const paginationSett = middleware_2.Pagination.handleQuery(req);
+         const stations = await charging_station_service_1.default
+-            .getAllStations(paginationSett.page, paginationSett.limit);
++            .getAllStations(req, paginationSett.page, paginationSett.limit);
+         return middleware_1.ResponseUtils.sendResponse(res, stations, 200);
+     }
+     async getStationById(req, res) {
+Index: dist/controllers/station-type-controller.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use strict\";\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.StationTypeController = void 0;\r\nconst middleware_1 = require(\"../middleware\");\r\nconst station_type_service_1 = __importDefault(require(\"../services/station-type-service\"));\r\nclass StationTypeController {\r\n    async getStationTypes(req, res) {\r\n        const stationTypes = await station_type_service_1.default.getAllStationTypes();\r\n        return middleware_1.ResponseUtils.sendResponse(res, stationTypes, 200);\r\n    }\r\n    async getStationType(req, res) {\r\n        const { id } = req.params;\r\n        const stationType = await station_type_service_1.default.getStationTypeById(id);\r\n        if (!stationType) {\r\n            return middleware_1.ResponseUtils.sendError(res, \"Station type not found\", 404);\r\n        }\r\n        return middleware_1.ResponseUtils.sendResponse(res, stationType, 200);\r\n    }\r\n    async createStationType(req, res) {\r\n        const stationTypeBody = req.body;\r\n        const stationType = await station_type_service_1.default.createStationType(stationTypeBody);\r\n        return middleware_1.ResponseUtils.sendResponse(res, stationType, 200);\r\n    }\r\n    async updateStationType(req, res) {\r\n        const { id } = req.params;\r\n        const stationTypeBody = req.body;\r\n        const stationType = await station_type_service_1.default.updateStationType(id, stationTypeBody);\r\n        if (!stationType) {\r\n            return middleware_1.ResponseUtils.sendError(res, \"Station type not found\", 404);\r\n        }\r\n        return middleware_1.ResponseUtils.sendResponse(res, stationType, 200);\r\n    }\r\n    async deleteStationType(req, res) {\r\n        const { id } = req.params;\r\n        const stationTypeToRemove = await station_type_service_1.default.deleteStation(id);\r\n        if (!stationTypeToRemove) {\r\n            return middleware_1.ResponseUtils.sendError(res, \"Station type not found\", 404);\r\n        }\r\n        return middleware_1.ResponseUtils.sendResponse(res, stationTypeToRemove, 200);\r\n    }\r\n}\r\nexports.StationTypeController = StationTypeController;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dist/controllers/station-type-controller.js b/dist/controllers/station-type-controller.js
+--- a/dist/controllers/station-type-controller.js	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/dist/controllers/station-type-controller.js	(date 1701865700877)
+@@ -6,9 +6,11 @@
+ exports.StationTypeController = void 0;
+ const middleware_1 = require("../middleware");
+ const station_type_service_1 = __importDefault(require("../services/station-type-service"));
++const middleware_2 = require("../middleware");
+ class StationTypeController {
+     async getStationTypes(req, res) {
+-        const stationTypes = await station_type_service_1.default.getAllStationTypes();
++        const paginationSett = middleware_2.Pagination.handleQuery(req);
++        const stationTypes = await station_type_service_1.default.getAllStationTypes(req, paginationSett.page, paginationSett.limit);
+         return middleware_1.ResponseUtils.sendResponse(res, stationTypes, 200);
+     }
+     async getStationType(req, res) {
+Index: src/controllers/connector-controller.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { Request, Response } from \"express\";\r\nimport { ResponseUtils } from \"../middleware\";\r\nimport ConnectorService from \"../services/connector-service\";\r\nimport { Pagination } from \"../middleware/pagination\";\r\n\r\nexport class ConnectorController {\r\n    async getConnectors(req: Request, res: Response): Promise<Response> {\r\n        const paginationSett = Pagination.handleQuery(req);\r\n        const connectors = await ConnectorService.getAllConnectors(\r\n            paginationSett.page,\r\n            paginationSett.limit\r\n        );\r\n        return ResponseUtils.sendResponse(res, connectors, 200);\r\n    }\r\n\r\n    async getConnector(req: Request, res: Response): Promise<Response> {\r\n        const { id } = req.params;\r\n        const connector = await ConnectorService.getConnectorById(id);\r\n\r\n        if(!connector){\r\n            return ResponseUtils.sendError(res, \"Connector not found\", 404);\r\n        }\r\n\r\n        return ResponseUtils.sendResponse(res, connector, 200);\r\n    }\r\n\r\n    async createConnector(req: Request, res: Response): Promise<Response> {\r\n        const connectorBody = req.body;\r\n        const newConnector = await ConnectorService.createConnector(connectorBody);\r\n        return ResponseUtils.sendResponse(res, newConnector, 200);\r\n    }\r\n\r\n    async updateConnector(req: Request, res: Response): Promise<Response> {\r\n        const { id } = req.params;\r\n        const connectorBody = req.body;\r\n        const connector = await ConnectorService.updateConnector(id, connectorBody);\r\n\r\n        if(!connector){\r\n            return ResponseUtils.sendError(res, \"Connector not found\", 404);\r\n        }\r\n\r\n        return ResponseUtils.sendResponse(res, connector, 200);\r\n    }\r\n\r\n    async deleteConnector(req: Request, res: Response): Promise<Response> {\r\n        const { id } = req.params;\r\n        const connector = await ConnectorService.deleteStation(id);\r\n\r\n        if(!connector) {\r\n            return ResponseUtils.sendError(res, \"Connector not found\", 404);\r\n        }\r\n\r\n        return ResponseUtils.sendResponse(res, connector, 200);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/controllers/connector-controller.ts b/src/controllers/connector-controller.ts
+--- a/src/controllers/connector-controller.ts	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/src/controllers/connector-controller.ts	(date 1701865310058)
+@@ -1,12 +1,13 @@
+ import { Request, Response } from "express";
+ import { ResponseUtils } from "../middleware";
+ import ConnectorService from "../services/connector-service";
+-import { Pagination } from "../middleware/pagination";
++import { Pagination } from "../middleware";
+ 
+ export class ConnectorController {
+     async getConnectors(req: Request, res: Response): Promise<Response> {
+         const paginationSett = Pagination.handleQuery(req);
+         const connectors = await ConnectorService.getAllConnectors(
++            req,
+             paginationSett.page,
+             paginationSett.limit
+         );
+Index: src/controllers/charging-station-controller.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { Request, Response } from \"express\";\r\nimport { ResponseUtils } from \"../middleware\";\r\nimport ChargingStationService from \"../services/charging-station-service\";\r\nimport { Pagination } from \"../middleware/pagination\";\r\n\r\nexport class ChargingStationController {\r\n    async getStations(req: Request, res: Response): Promise<Response> {\r\n        const paginationSett = Pagination.handleQuery(req);\r\n        const stations = await ChargingStationService\r\n            .getAllStations(\r\n                paginationSett.page,\r\n                paginationSett.limit\r\n            );\r\n        return ResponseUtils.sendResponse(res, stations, 200);\r\n    }\r\n\r\n    async getStationById(req: Request, res: Response): Promise<Response> {\r\n        const { id } = req.params;\r\n        const station = await ChargingStationService.getStationById(id);\r\n\r\n        if(!station){\r\n            return ResponseUtils.sendError(res, \"Station not found\", 404);\r\n        }\r\n\r\n        return ResponseUtils.sendResponse(res, station, 200);\r\n    }\r\n\r\n    async createStation(req: Request, res: Response): Promise<Response> {\r\n        const stationBody = req.body;\r\n        const newStation = await ChargingStationService.createStation(stationBody);\r\n        return ResponseUtils.sendResponse(res, newStation, 200);\r\n    }\r\n\r\n    async updateStation(req: Request, res: Response): Promise<Response> {\r\n        const { id } = req.params;\r\n        const stationBody = req.body;\r\n        const updatedStation = await ChargingStationService.updateStation(id, stationBody);\r\n\r\n        if(!updatedStation){\r\n            return ResponseUtils.sendError(res, \"Station not found\", 404);\r\n        }\r\n\r\n        return ResponseUtils.sendResponse(res, updatedStation, 200);\r\n    }\r\n\r\n    async deleteStation(req: Request, res: Response): Promise<Response> {\r\n        const { id } = req.params;\r\n        const stationToDelete = await ChargingStationService.deleteStation(id);\r\n\r\n        if(!stationToDelete) {\r\n            return ResponseUtils.sendError(res, \"Station not found\", 404);\r\n        }\r\n\r\n        return ResponseUtils.sendResponse(res, {message: \"Station remove successfully\"}, 200);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/controllers/charging-station-controller.ts b/src/controllers/charging-station-controller.ts
+--- a/src/controllers/charging-station-controller.ts	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/src/controllers/charging-station-controller.ts	(date 1701862977648)
+@@ -1,13 +1,14 @@
+ import { Request, Response } from "express";
+ import { ResponseUtils } from "../middleware";
+ import ChargingStationService from "../services/charging-station-service";
+-import { Pagination } from "../middleware/pagination";
++import { Pagination } from "../middleware";
+ 
+ export class ChargingStationController {
+     async getStations(req: Request, res: Response): Promise<Response> {
+         const paginationSett = Pagination.handleQuery(req);
+         const stations = await ChargingStationService
+             .getAllStations(
++                req,
+                 paginationSett.page,
+                 paginationSett.limit
+             );
+Index: src/middleware/index.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>export * from './error-handler';\r\nexport * from './response-utils'
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/middleware/index.ts b/src/middleware/index.ts
+--- a/src/middleware/index.ts	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/src/middleware/index.ts	(date 1701818288739)
+@@ -1,2 +1,3 @@
+ export * from './error-handler';
+-export * from './response-utils'
+\ No newline at end of file
++export * from './response-utils';
++export * from './pagination';
+\ No newline at end of file
+Index: src/services/station-type-service.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { StationType } from \"../entity\";\r\nimport { AppDataSource } from \"../database/data-source\";\r\nimport Pagination from \"../middleware/pagination\";\r\n\r\nexport class StationTypeService {\r\n    async getAllStationTypes(page: number = 1, pageSize: number = 5): Promise<{\r\n        result: StationType[],\r\n        total_count: number,\r\n        last_page: number,\r\n        actual_page: number\r\n    }> {\r\n        const stationTypeRepo = AppDataSource.getRepository(StationType);\r\n        return Pagination.paginate(stationTypeRepo, page, pageSize);\r\n    }\r\n\r\n    async getStationTypeById(id: string): Promise<StationType | null> {\r\n        const stationTypeRepo = AppDataSource.getRepository(StationType);\r\n        return await stationTypeRepo.findOneBy({\r\n            id: id,\r\n        });\r\n    }\r\n\r\n    async createStationType(stationTypeData: Partial<StationType>): Promise<StationType> {\r\n        const stationTypeRepo = AppDataSource.getRepository(StationType);\r\n        const newStationType = stationTypeRepo.create(stationTypeData);\r\n        return await stationTypeRepo.save(newStationType);\r\n    }\r\n\r\n    async updateStationType(id: string, StationTypeNewData: Partial<StationType>): Promise<StationType | null> {\r\n        const stationTypeRepo = AppDataSource.getRepository(StationType);\r\n        const existingStationType = await stationTypeRepo.findOneBy({\r\n            id: id,\r\n        });\r\n\r\n        if(!existingStationType) {\r\n            return null;\r\n        }\r\n\r\n        stationTypeRepo.merge(existingStationType, StationTypeNewData);\r\n        return await stationTypeRepo.save(existingStationType);\r\n    }\r\n\r\n    async deleteStation(id: string): Promise<boolean> {\r\n        const stationTypeRepo = AppDataSource.getRepository(StationType);\r\n        const stationTypeToRemove = await stationTypeRepo.findOneBy({\r\n            id: id,\r\n        });\r\n\r\n        if(!stationTypeToRemove) {\r\n            return false;\r\n        }\r\n\r\n        await stationTypeRepo.remove(stationTypeToRemove);\r\n        return true;\r\n    }\r\n}\r\n\r\nexport default new StationTypeService();
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/services/station-type-service.ts b/src/services/station-type-service.ts
+--- a/src/services/station-type-service.ts	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/src/services/station-type-service.ts	(date 1701864892580)
+@@ -1,16 +1,15 @@
+-import { StationType } from "../entity";
++import {ChargingStation, StationType} from "../entity";
+ import { AppDataSource } from "../database/data-source";
+ import Pagination from "../middleware/pagination";
++import {PaginationResponse} from "../support/interfaces";
++import {Request} from "express";
++import Filters from "../middleware/filters";
+ 
+ export class StationTypeService {
+-    async getAllStationTypes(page: number = 1, pageSize: number = 5): Promise<{
+-        result: StationType[],
+-        total_count: number,
+-        last_page: number,
+-        actual_page: number
+-    }> {
++    async getAllStationTypes(req: Request, page: number = 1, pageSize: number = 5): Promise<PaginationResponse<StationType>> {
+         const stationTypeRepo = AppDataSource.getRepository(StationType);
+-        return Pagination.paginate(stationTypeRepo, page, pageSize);
++        const stationTypeFiltered = Filters.filterByQueryParameter(req, stationTypeRepo, "station_type");
++        return Pagination.paginate(stationTypeRepo, page, pageSize, await stationTypeFiltered);
+     }
+ 
+     async getStationTypeById(id: string): Promise<StationType | null> {
+Index: src/services/connector-service.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { Connector } from \"../entity\";\r\nimport { AppDataSource } from \"../database/data-source\";\r\nimport Pagination from \"../middleware/pagination\";\r\n\r\nexport class ConnectorService {\r\n    async getAllConnectors(page: number = 1, pageSize: number = 5): Promise<{\r\n        result: Connector[],\r\n        total_count: number,\r\n        last_page: number,\r\n        actual_page: number\r\n    }> {\r\n        const connectorRepo = AppDataSource.getRepository(Connector);\r\n        return Pagination.paginate(connectorRepo, page, pageSize);\r\n    }\r\n\r\n    async getConnectorById(id: string): Promise<Connector | null> {\r\n        const connectorRepo = AppDataSource.getRepository(Connector);\r\n        return await connectorRepo.findOneBy({\r\n            id: id,\r\n        });\r\n    }\r\n\r\n    async createConnector(connectorData: Partial<Connector>): Promise<Connector> {\r\n        const connectorRepo = AppDataSource.getRepository(Connector);\r\n        const newConnector = connectorRepo.create(connectorData);\r\n        return await connectorRepo.save(newConnector);\r\n    }\r\n\r\n    async updateConnector(id: string, connectorNewData: Partial<Connector>): Promise<Connector | null> {\r\n        const connectorRepo = AppDataSource.getRepository(Connector);\r\n        const existingConnector = await connectorRepo.findOneBy({\r\n            id: id,\r\n        });\r\n\r\n        if(!existingConnector) {\r\n            return null;\r\n        }\r\n\r\n        connectorRepo.merge(existingConnector, connectorNewData);\r\n        return await connectorRepo.save(existingConnector);\r\n    }\r\n\r\n    async deleteStation(id: string): Promise<boolean> {\r\n        const connectorRepo = AppDataSource.getRepository(Connector);\r\n        const connectorToRemove = await connectorRepo.findOneBy({\r\n            id: id,\r\n        });\r\n\r\n        if(!connectorToRemove) {\r\n            return false;\r\n        }\r\n\r\n        await connectorRepo.remove(connectorToRemove);\r\n        return true;\r\n    }\r\n}\r\n\r\nexport default new ConnectorService();
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/services/connector-service.ts b/src/services/connector-service.ts
+--- a/src/services/connector-service.ts	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/src/services/connector-service.ts	(date 1701864892580)
+@@ -1,16 +1,15 @@
+-import { Connector } from "../entity";
++import {ChargingStation, Connector} from "../entity";
+ import { AppDataSource } from "../database/data-source";
+ import Pagination from "../middleware/pagination";
++import { PaginationResponse } from "../support/interfaces";
++import Filters from "../middleware/filters";
++import {Request} from "express";
+ 
+ export class ConnectorService {
+-    async getAllConnectors(page: number = 1, pageSize: number = 5): Promise<{
+-        result: Connector[],
+-        total_count: number,
+-        last_page: number,
+-        actual_page: number
+-    }> {
++    async getAllConnectors(req: Request, page: number = 1, pageSize: number = 5): Promise<PaginationResponse<Connector>> {
+         const connectorRepo = AppDataSource.getRepository(Connector);
+-        return Pagination.paginate(connectorRepo, page, pageSize);
++        const connectorFiltered = Filters.filterByQueryParameter(req, connectorRepo, "connector");
++        return Pagination.paginate(connectorRepo, page, pageSize, await connectorFiltered);
+     }
+ 
+     async getConnectorById(id: string): Promise<Connector | null> {
+Index: src/services/charging-station-service.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { ChargingStation } from \"../entity\";\r\nimport { AppDataSource } from \"../database/data-source\";\r\nimport Pagination from \"../middleware/pagination\";\r\n\r\nexport class ChargingStationService {\r\n    async getAllStations(page: number = 1, pageSize: number = 5): Promise<{\r\n        result: ChargingStation[],\r\n        total_count: number,\r\n        last_page: number,\r\n        actual_page: number\r\n    }> {\r\n        const chargingStationRepo = AppDataSource.getRepository(ChargingStation);\r\n        return Pagination.paginate(chargingStationRepo, page, pageSize);\r\n    }\r\n\r\n    async getStationById(id: string): Promise<ChargingStation | null> {\r\n        const chargingStationRepo = AppDataSource.getRepository(ChargingStation);\r\n        return await chargingStationRepo.findOneBy({\r\n            id: id,\r\n        });\r\n    }\r\n\r\n    async createStation(stationData: Partial<ChargingStation>): Promise<ChargingStation> {\r\n        const chargingStationRepo = AppDataSource.getRepository(ChargingStation);\r\n        const newStation = chargingStationRepo.create(stationData);\r\n        return await chargingStationRepo.save(newStation);\r\n    }\r\n\r\n    async updateStation(id: string, stationNewData: Partial<ChargingStation>): Promise<ChargingStation | null> {\r\n        const chargingStationRepo = AppDataSource.getRepository(ChargingStation);\r\n        const existingStation = await chargingStationRepo.findOneBy({\r\n            id: id,\r\n        });\r\n\r\n        if (!existingStation) {\r\n            return null;\r\n        }\r\n\r\n        chargingStationRepo.merge(existingStation, stationNewData);\r\n        return await chargingStationRepo.save(existingStation);\r\n    }\r\n\r\n    async deleteStation(id: string): Promise<boolean> {\r\n        const chargingStationRepo = AppDataSource.getRepository(ChargingStation);\r\n        const stationToRemove = await chargingStationRepo.findOneBy({\r\n            id: id,\r\n        });\r\n        if(!stationToRemove)\r\n        {\r\n            return false;\r\n        }\r\n        await chargingStationRepo.remove(stationToRemove);\r\n        return true;\r\n    }\r\n}\r\nexport default new ChargingStationService();
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/services/charging-station-service.ts b/src/services/charging-station-service.ts
+--- a/src/services/charging-station-service.ts	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/src/services/charging-station-service.ts	(date 1701865275297)
+@@ -1,16 +1,15 @@
+ import { ChargingStation } from "../entity";
+ import { AppDataSource } from "../database/data-source";
+ import Pagination from "../middleware/pagination";
++import { PaginationResponse } from "../support/interfaces";
++import {Request} from "express";
++import Filters from "../middleware/filters";
+ 
+ export class ChargingStationService {
+-    async getAllStations(page: number = 1, pageSize: number = 5): Promise<{
+-        result: ChargingStation[],
+-        total_count: number,
+-        last_page: number,
+-        actual_page: number
+-    }> {
++    async getAllStations(req: Request, page: number = 1, pageSize: number = 5): Promise<PaginationResponse<ChargingStation>> {
+         const chargingStationRepo = AppDataSource.getRepository(ChargingStation);
+-        return Pagination.paginate(chargingStationRepo, page, pageSize);
++        const chargingStationFiltered = Filters.filterByQueryParameter(req, chargingStationRepo, "charging_station");
++        return Pagination.paginate(chargingStationRepo, page, pageSize, await chargingStationFiltered);
+     }
+ 
+     async getStationById(id: string): Promise<ChargingStation | null> {
+Index: src/entity/station-type.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from \"typeorm\";\r\nimport { StationCurrentType } from \"../enums\";\r\nimport { ChargingStation } from \"./charging-station\";\r\n\r\n@Entity()\r\nexport class StationType {\r\n    @PrimaryGeneratedColumn(\"uuid\")\r\n    id: string\r\n\r\n    @Column()\r\n    name: string\r\n\r\n    @Column(\"integer\")\r\n    plug_count: number\r\n\r\n    @Column(\"float\")\r\n    efficiency: number\r\n\r\n    @Column()\r\n    current_type: StationCurrentType\r\n\r\n    @OneToMany(() => ChargingStation, (chargingStation) => chargingStation.station_type)\r\n    charging_stations: ChargingStation[];\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/station-type.ts b/src/entity/station-type.ts
+--- a/src/entity/station-type.ts	(revision d093ec38796e28116f5c851d7a45af1d9a33538b)
++++ b/src/entity/station-type.ts	(date 1701821337197)
+@@ -17,7 +17,7 @@
+     efficiency: number
+ 
+     @Column()
+-    current_type: StationCurrentType
++    current_type: StationCurrentType.AC | StationCurrentType.DC
+ 
+     @OneToMany(() => ChargingStation, (chargingStation) => chargingStation.station_type)
+     charging_stations: ChargingStation[];

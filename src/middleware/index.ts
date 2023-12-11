@@ -1,3 +1,3 @@
 export * from './error-handler';
 export * from './response-utils';
-export * from './queryCreator';
+export * from './query-creator';
