@@ -1,11 +1,11 @@
-import {Request, Response} from "express";
-import {ResponseUtils} from "../middleware";
-import {AppDataSource} from "../database/data-source";
-import {StationType} from "../entity";
+import { Request, Response } from "express";
+import { ResponseUtils } from "../middleware";
+import { AppDataSource } from "../database/data-source";
+import { StationType } from "../entity";
 import QueryCreator from "../middleware/query-creator";
-import {validate} from "class-validator";
-import {ResponseCodes} from "../support/enums";
-import {ResponseMessages} from "../support/objects/responseMessages";
+import { validate } from "class-validator";
+import { ResponseCodes } from "../support/enums";
+import { ResponseMessages } from "../support/objects/responseMessages";
 
 export class StationTypeController {
 
