@@ -21,7 +21,10 @@ export  class ResponseUtils {
         return res.status(statusCode).send({
             success: true,
             message: "Success",
-            data
+            data,
+            metadata: {
+                token: res.locals.token
+            }
         });
     }
 
@@ -39,10 +42,21 @@ export  class ResponseUtils {
         } else {
             console.error(`${timestamp} [${LogLevels.ERROR}] [${context}]: ${resMessage} => ${message}`);
         }
-        return res.status(statusCode).send({
-            success: false,
-            message,
-            errors: errors?.message
-        });
+        if(res.locals.token) {
+            return res.status(statusCode).send({
+                success: false,
+                message,
+                errors: errors?.message,
+                metadata: {
+                    token: res.locals.token
+                }
+            });
+        } else {
+            return res.status(statusCode).send({
+                success: false,
+                message,
+                errors: errors?.message
+            });
+        }
     }
 }

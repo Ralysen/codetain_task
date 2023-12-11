@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Response handling fix">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="21df1290-0dfb-4b33-a5df-76ad0dd866fc" name="Changes" comment="Docker create image">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/charging-station-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/connector-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/connector-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/station-type-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/response-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/response-utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/token-handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/token-handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user-route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/user-route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +76,7 @@
     &quot;git-widget-placeholder&quot;: &quot;charger-development-unit-tests&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.9.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.9.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Repos/test/codetain_task&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -93,6 +94,10 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -139,7 +144,10 @@
       <workItem from="1702111762952" duration="10894000" />
       <workItem from="1702247416053" duration="834000" />
       <workItem from="1702249927121" duration="539000" />
-      <workItem from="1702250548374" duration="2464000" />
+      <workItem from="1702250548374" duration="11136000" />
+      <workItem from="1702262121912" duration="1166000" />
+      <workItem from="1702263861979" duration="2756000" />
+      <workItem from="1702266860168" duration="3448000" />
     </task>
     <task id="LOCAL-00001" summary="Base project configuration">
       <option name="closed" value="true" />
@@ -221,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702236438604</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Docker create image">
+      <option name="closed" value="true" />
+      <created>1702253207280</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702253207280</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,17 +259,7 @@
     <MESSAGE value="Add basic authorization - secure api with token, token generate" />
     <MESSAGE value="Change response handling for controllers: auth and charging-station" />
     <MESSAGE value="Change response handling for controllers: connector, station-type, user and token-handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change response handling for controllers: connector, station-type, user and token-handler" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/dist/middleware/token-handler.js</url>
-          <line>35</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Docker create image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker create image" />
   </component>
 </project>
